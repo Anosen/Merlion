@@ -68,7 +68,7 @@ class NAB(TSADBaseDataset):
             ]
         else:
             subsets = [subset]
-        self.download(rootdir, subsets)
+        #self.download(rootdir, subsets)
         dsetdirs = [os.path.join(rootdir, s) for s in subsets]
 
         labelfile = os.path.join(rootdir, "labels/combined_windows.json")

@@ -96,6 +96,10 @@ class AutoEncoder(DetectorBase):
         self.data_dim = None
 
     def _build_model(self, dim):
+        input_size=dim * self.k
+        hidden_size=self.hidden_size
+        layer_sizes=self.layer_sizes
+        print(f'Building AE with input {input_size}, hidden size {hidden_size}, layer sizes {layer_sizes}')
         model = AEModule(input_size=dim * self.k, hidden_size=self.hidden_size, layer_sizes=self.layer_sizes)
         return model
 

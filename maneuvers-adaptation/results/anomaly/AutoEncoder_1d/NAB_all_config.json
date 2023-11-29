@@ -1,0 +1,81 @@
+{
+  "code_version_info": {
+    "commit": "ce91a2d6a2bcbf6480fea36e1ebeb3be24bf3e15",
+    "time": "2023-11-27 09:31:28.744023"
+  },
+  "evaluator_config": {
+    "cadence": null,
+    "max_delay_sec": null,
+    "max_early_sec": 7200,
+    "retrain_freq": 0.0,
+    "train_window": 0.0
+  },
+  "model_config": {
+    "batch_size": 512,
+    "calibrator": {
+      "abs_score": true,
+      "anchors": [
+        [
+          5.453824996948242e-06,
+          0.0
+        ],
+        [
+          0.05063536924390672,
+          0.5
+        ],
+        [
+          0.10639691353729144,
+          1.0
+        ],
+        [
+          0.3431437970799612,
+          1.5
+        ],
+        [
+          0.7088583199391898,
+          2.0
+        ],
+        [
+          2.9066357612609863,
+          5.0
+        ]
+      ],
+      "max_score": 1000,
+      "name": "AnomScoreCalibrator"
+    },
+    "dim": 1,
+    "enable_calibrator": true,
+    "enable_threshold": true,
+    "hidden_size": 5,
+    "layer_sizes": [
+      25,
+      10,
+      5
+    ],
+    "lr": 0.001,
+    "normalize": {
+      "bias": {
+        "value": 13688.55625
+      },
+      "name": "MeanVarNormalize",
+      "normalize_bias": true,
+      "normalize_scale": true,
+      "scale": {
+        "value": 7633.30105203526
+      }
+    },
+    "num_epochs": 50,
+    "sequence_len": 1,
+    "threshold": {
+      "abs_score": true,
+      "alm_suppress_minutes": 120,
+      "alm_threshold": 3.5,
+      "alm_window_minutes": 60,
+      "min_alm_in_window": 2,
+      "name": "AggregateAlarms"
+    },
+    "transform": {
+      "name": "Identity"
+    }
+  }
+}

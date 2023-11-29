@@ -67,14 +67,14 @@ def parse_args():
         "--models",
         type=str,
         nargs="+",
-        default=["DefaultDetector"],
+        default=["AutoEncoder"],#["DefaultDetector"],
         help="Name of model (or models in ensemble) to benchmark.",
         choices=valid_models,
     )
     parser.add_argument(
         "--retrain_freq",
         type=str,
-        default="default",
+        default='none',#"default",
         help="String (e.g. 1d, 2w, etc.) specifying how often "
         "to re-train the model before evaluating it on "
         "the next window of data. Note that re-training "
@@ -137,7 +137,7 @@ def parse_args():
         "the model training phase, and simply evaluate "
         "on partial saved results.",
     )
-    parser.add_argument("--debug", action="store_true", default=False, help="Whether to enable INFO-level logs.")
+    parser.add_argument("--debug", action="store_true", default=True, help="Whether to enable INFO-level logs.")
     parser.add_argument(
         "--visualize",
         action="store_true",
