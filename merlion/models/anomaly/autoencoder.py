@@ -95,6 +95,18 @@ class AutoEncoder(DetectorBase):
         self.model = None
         self.data_dim = None
 
+    def _build_empty_model(self, dim):
+        input_size=dim * self.k
+        hidden_size=self.hidden_size
+        layer_sizes=self.layer_sizes
+        print(f'Building AE with input {input_size}, hidden size {hidden_size}, layer sizes {layer_sizes}')
+        model = AEModule(input_size=dim * self.k, hidden_size=self.hidden_size, layer_sizes=self.layer_sizes)
+        
+        self.data_dim = dim
+        self.model = model.to(self.device)
+        self.optimizer = torch.optim.Adam(self.model.parameters(), lr=self.lr)
+        return model
+
     def _build_model(self, dim):
         input_size=dim * self.k
         hidden_size=self.hidden_size
@@ -131,7 +143,8 @@ class AutoEncoder(DetectorBase):
                 total_loss += loss
             if bar is not None:
                 bar.print(epoch + 1, prefix="", suffix="Complete, Loss {:.4f}".format(total_loss / len(train_data)))
-
+            self.total_loss=loss
+        self.optimizer=optimizer
         return self._get_anomaly_score(train_data)
 
     def _get_anomaly_score(self, time_series: pd.DataFrame, time_series_prev: pd.DataFrame = None) -> pd.DataFrame:

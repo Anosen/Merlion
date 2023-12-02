@@ -1,0 +1,184 @@
+
+  0%|          | 0/192 [00:00<?, ?it/s]
+Building AE with input 6, hidden size 1, layer sizes (25, 10, 5)
+
+
+
+ |========================================| 100.0% Complete, Loss 0.0020
+Building AE with input 6, hidden size 1, layer sizes (25, 10, 5)
+
+
+
+
+ |========================================| 100.0% Complete, Loss 0.0024
+Building AE with input 6, hidden size 1, layer sizes (25, 10, 5)
+
+
+
+ |========================================| 100.0% Complete, Loss 0.0022
+Building AE with input 6, hidden size 1, layer sizes (25, 10, 5)
+
+
+
+ |========================================| 100.0% Complete, Loss 0.0024
+Building AE with input 6, hidden size 1, layer sizes (25, 10, 5)
+
+
+
+ |========================================| 100.0% Complete, Loss 0.0016
+Building AE with input 6, hidden size 1, layer sizes (25, 10, 5)
+
+
+
+
+ |========================================| 100.0% Complete, Loss 0.0022
+Building AE with input 6, hidden size 1, layer sizes (25, 10, 5)
+
+
+
+ |========================================| 100.0% Complete, Loss 0.0021
+Building AE with input 6, hidden size 1, layer sizes (25, 10, 5)
+
+
+
+  0%|          | 0/192 [00:00<?, ?it/s]2023-12-01 00:14:41 - INFO - (3040347354:161): New best AutoEncoder:
+{'alm_threshold': 1.8,
+ 'batch_size': 512,
+ 'hidden_size': 1,
+ 'layer_sizes': (25, 10, 5),
+ 'lr': 0.0005,
+ 'num_epochs': 50,
+ 'sequence_len': 1}
+Configuration;
+{'f1': 0.2899935378097649,
+ 'f2': 0.24615514743203687,
+ 'loss': 1.0844366922974586,
+ 'mttd': 150904.5,
+ 'precision': 0.7951656661409094,
+ 'recall': 0.28166998856425485,
+ 'train_time': 8.303604125}
+ |========================================| 100.0% Complete, Loss 0.0029
+Building AE with input 6, hidden size 1, layer sizes (25, 10, 5)
+
+
+
+ |========================================| 100.0% Complete, Loss 0.0024
+Building AE with input 6, hidden size 1, layer sizes (25, 10, 5)
+
+
+
+
+ |========================================| 100.0% Complete, Loss 0.0020
+Building AE with input 6, hidden size 1, layer sizes (25, 10, 5)
+
+
+
+ |========================================| 100.0% Complete, Loss 0.0022
+Building AE with input 6, hidden size 1, layer sizes (25, 10, 5)
+
+
+
+
+ |========================================| 100.0% Complete, Loss 0.0020
+Building AE with input 6, hidden size 1, layer sizes (25, 10, 5)
+
+
+
+ |========================================| 100.0% Complete, Loss 0.0019
+Building AE with input 6, hidden size 1, layer sizes (25, 10, 5)
+
+
+
+
+ |========================================| 100.0% Complete, Loss 0.0017
+Building AE with input 6, hidden size 1, layer sizes (25, 10, 5)
+
+
+
+ |========================================| 100.0% Complete, Loss 0.0016
+Building AE with input 6, hidden size 1, layer sizes (25, 10, 5)
+
+
+
+  1%|          | 1/192 [01:09<3:40:12, 69.17s/it]2023-12-01 00:15:51 - INFO - (3040347354:161): New best AutoEncoder:
+{'alm_threshold': 1.8,
+ 'batch_size': 512,
+ 'hidden_size': 1,
+ 'layer_sizes': (25, 10, 5),
+ 'lr': 0.001,
+ 'num_epochs': 50,
+ 'sequence_len': 1}
+Configuration;
+{'f1': 0.2924837654219919,
+ 'f2': 0.24823185224028893,
+ 'loss': 0.9946086071431637,
+ 'mttd': 153277.75,
+ 'precision': 0.7889076868928204,
+ 'recall': 0.28337909199011085,
+ 'train_time': 8.408792125}
+ |========================================| 100.0% Complete, Loss 0.0026
+Building AE with input 6, hidden size 1, layer sizes (25, 10, 5)
+
+
+
+ |========================================| 100.0% Complete, Loss 0.0018
+Building AE with input 6, hidden size 1, layer sizes (25, 10, 5)
+
+
+
+ |========================================| 100.0% Complete, Loss 0.0017
+Building AE with input 6, hidden size 1, layer sizes (25, 10, 5)
+
+
+
+ |========================================| 100.0% Complete, Loss 0.0022
+Building AE with input 6, hidden size 1, layer sizes (25, 10, 5)
+
+
+
+ |========================================| 100.0% Complete, Loss 0.0015
+Building AE with input 6, hidden size 1, layer sizes (25, 10, 5)
+
+
+
+ |========================================| 100.0% Complete, Loss 0.0014
+Building AE with input 6, hidden size 1, layer sizes (25, 10, 5)
+
+
+
+ |========================================| 100.0% Complete, Loss 0.0015
+Building AE with input 6, hidden size 1, layer sizes (25, 10, 5)
+
+
+
+
+ |========================================| 100.0% Complete, Loss 0.0023
+Building AE with input 6, hidden size 1, layer sizes (25, 10, 5)
+
+
+
+  1%|          | 2/192 [02:19<3:40:32, 69.64s/it]2023-12-01 00:16:59 - INFO - (3040347354:161): New best AutoEncoder:
+{'alm_threshold': 1.8,
+ 'batch_size': 512,
+ 'hidden_size': 1,
+ 'layer_sizes': (25, 10, 5),
+ 'lr': 0.005,
+ 'num_epochs': 50,
+ 'sequence_len': 1}
+Configuration;
+{'f1': 0.2889392077600299,
+ 'f2': 0.24547171041785484,
+ 'loss': 0.9013157095760107,
+ 'mttd': 158222.625,
+ 'precision': 0.7840441980966775,
+ 'recall': 0.28113693952374313,
+ 'train_time': 8.151645375000001}
+ |========================================| 100.0% Complete, Loss 0.0029
+Building AE with input 6, hidden size 1, layer sizes (25, 10, 5)
+
+
+
+ |========================================| 100.0% Complete, Loss 0.0024
+Building AE with input 6, hidden size 1, layer sizes (25, 10, 5)
+
+

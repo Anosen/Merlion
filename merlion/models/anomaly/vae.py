@@ -107,6 +107,22 @@ class VAE(DetectorBase):
     def require_univariate(self) -> bool:
         return False
 
+    def _build_empty_model(self, dim):
+        model = CVAE(
+            x_dim=dim * self.k,
+            c_dim=0,
+            encoder_hidden_sizes=self.encoder_hidden_sizes,
+            decoder_hidden_sizes=self.decoder_hidden_sizes,
+            latent_size=self.latent_size,
+            dropout_rate=self.dropout_rate,
+            activation=self.activation,
+        )
+        
+        self.data_dim = dim
+        self.model = model.to(self.device)
+        self.optimizer = torch.optim.Adam(self.model.parameters(), lr=self.lr)
+        return model
+
     def _build_model(self, dim):
         model = CVAE(
             x_dim=dim * self.k,
@@ -121,6 +137,8 @@ class VAE(DetectorBase):
 
     def _train(self, train_data: pd.DataFrame, train_config=None) -> pd.DataFrame:
         self.model = self._build_model(train_data.shape[1]).to(self.device)
+        # from torchsummary import summary
+        # summary(self.model, train_data.shape)
         self.data_dim = train_data.shape[1]
 
         loader = RollingWindowDataset(
@@ -151,6 +169,8 @@ class VAE(DetectorBase):
                 total_loss += loss
             if bar is not None:
                 bar.print(epoch + 1, prefix="", suffix="Complete, Loss {:.4f}".format(total_loss / len(train_data)))
+            self.total_loss=loss
+        self.optimizer=optimizer
         return self._get_anomaly_score(train_data)
 
     def _get_anomaly_score(self, time_series: pd.DataFrame, time_series_prev: pd.DataFrame = None) -> pd.DataFrame:

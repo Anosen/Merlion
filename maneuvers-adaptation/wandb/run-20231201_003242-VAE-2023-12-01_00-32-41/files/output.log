@@ -1,0 +1,13 @@
+
+  0%|          | 0/384 [00:00<?, ?it/s]
+
+
+ |========================================| 100.0% Complete, Loss 0.0013
+
+  0%|          | 0/384 [00:08<?, ?it/s]
+Error in callback <bound method _WandbInit._resume_backend of <wandb.sdk.wandb_init._WandbInit object at 0x7fe2f0b0e8d0>> (for pre_run_cell), with arguments args (<ExecutionInfo object at 7fe2d6fcd9a0, raw_cell="md = ManeuverDetection(dataset=None, log_wandb=Tru.." store_history=True silent=False shell_futures=True cell_id=vscode-notebook-cell://wsl%2Bdebian_sys843/root/dev/Merlion/maneuvers-adaptation/TLE_with_DORIS_maneuevers_VAE.ipynb#X31sdnNjb2RlLXJlbW90ZQ%3D%3D>,),kwargs {}:
+2023-12-01 00:38:49 - INFO - (1900189765:4): Initializing ManeuverDetection: log_wandb: True - eval:False
+2023-12-01 00:38:49 - INFO - (1900189765:16): Fetching dataset: /root/dev/Merlion/maneuvers-adaptation/data/residues
+2023-12-01 00:38:49 - INFO - (2836284721:64): Cropping train_data to a length of 1709
+2023-12-01 00:38:49 - INFO - (2836284721:64): Cropping test_data to a length of 4400
+2023-12-01 00:38:49 - INFO - (2836284721:64): Cropping test_labels to a length of 4416
