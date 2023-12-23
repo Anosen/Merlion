@@ -1,0 +1,9 @@
+
+Building AE with input 6, hidden size 11, layer sizes (15, 10, 5)
+Traceback (most recent call last):
+  File "/root/dev/Merlion/maneuvers-adaptation/ManeuverDetection.py", line 443, in <module>
+    md.single_model_train(model_type=model_type, model_kwargs=best_models_kargs[model_type])
+  File "/root/dev/Merlion/maneuvers-adaptation/ManeuverDetection.py", line 374, in single_model_train
+    loss = model._train_one_epoch()
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: AutoEncoder._train_one_epoch() missing 1 required positional argument: 'loader'

@@ -1,0 +1,108 @@
+{
+    "os": "Linux-5.15.133.1-microsoft-standard-WSL2-x86_64-with-glibc2.36",
+    "python": "3.12.0",
+    "heartbeatAt": "2023-12-04T08:20:48.395022",
+    "startedAt": "2023-12-04T08:20:47.054540",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "/root/dev/Merlion/maneuvers-adaptation/ManeuverDetection.py",
+    "codePathLocal": "maneuvers-adaptation/ManeuverDetection.py",
+    "codePath": "maneuvers-adaptation/ManeuverDetection.py",
+    "git": {
+        "remote": "git@github.com:Anosen/Merlion.git",
+        "commit": "180d9587d6b685bd704037a45b93b57d4bc59a9d"
+    },
+    "email": "gregoire.marie08@gmail.com",
+    "root": "/root/dev/Merlion",
+    "host": "MSI",
+    "username": "root",
+    "executable": "/root/miniconda3/envs/sys843_env/bin/python",
+    "cpu_count": 6,
+    "cpu_count_logical": 12,
+    "cpu_freq": {
+        "current": 2592.0100000000007,
+        "min": 0.0,
+        "max": 0.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2592.01,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2592.01,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2592.01,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2592.01,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2592.01,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2592.01,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2592.01,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2592.01,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2592.01,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2592.01,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2592.01,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2592.01,
+            "min": 0.0,
+            "max": 0.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 1006.853931427002,
+            "used": 17.820499420166016
+        }
+    },
+    "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 3060 Laptop GPU",
+            "memory_total": 6442450944
+        }
+    ],
+    "memory": {
+        "total": 7.671039581298828
+    }
+}

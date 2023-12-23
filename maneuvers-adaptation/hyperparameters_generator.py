@@ -8,26 +8,37 @@ rootdir = dirname(abspath(__file__))
 
 ## AE
 ae_hyperparams = { # A dict to store the hyperparameter search space
-    'hidden_size': list(range(1,20,5)),
-    'layer_sizes': [(25, 10, 5), (20, 15, 10), (15, 10, 5)],
-    'sequence_len': list(range(1,20,5)),
-    'lr': [0.5e-3, 1.0e-3, 5e-3, 1.0e-2],
+    'hidden_size': list(range(10,13,1)),
+    'layer_sizes': [(15, 10, 5)],
+    'sequence_len': list(range(1,4,1)),
+    'lr': [0.5e-3, 1.0e-3, 5e-3],
     'batch_size': [512],
     'num_epochs': [50]#[25, 50, 100]
 }
 
 ## VAE
 vae_hyperparams = { # A dict to store the hyperparameter search space
-    'encoder_hidden_sizes': [(25, 10, 5), (20, 15, 10), (15, 10, 5)],
+    'encoder_hidden_sizes': [(15, 10, 5)],
     #'decoder_hidden_sizes': *invert of encoder_hidden_sizes*,
-    'latent_size': list(range(1,20,5)),
-    'sequence_len': list(range(1,20,5)),
+    'latent_size': list(range(10,13,1)),
+    'sequence_len': list(range(1,4,1)),
     'kld_weight': [1.0],
     'dropout_rate': [0.0],
-    'num_eval_samples': list(range(5,15,5)),
-    'lr': [0.5e-3, 1.0e-3, 5e-3, 1.0e-2],
+    'num_eval_samples': list(range(5,7,1)),
+    'lr': [0.5e-3, 1.0e-3],
     'batch_size': [1024],
     'num_epochs': [20]#[5, 15, 25],
+}
+
+## LSTMED
+lstmed_hyperparams = { # A dict to store the hyperparameter search space
+    'hidden_size': list(range(1,20,5)),
+    'sequence_len': list(range(10,30,5)),
+    'n_layers': [(1, 1)],
+    'dropout': [(0, 0)],
+    'lr': [0.5e-3, 1.0e-3, 5e-3, 1.0e-2],
+    'batch_size': [256, 512],
+    'num_epochs': [30]
 }
 
 ## Isolation Forest
@@ -40,6 +51,7 @@ isolfor_hyperparams = { # A dict to store the hyperparameter search space
 hyperparams_dict = {
     'AutoEncoder': ae_hyperparams, 
     'VAE': vae_hyperparams,
+    'LSTMED': lstmed_hyperparams,
     'IsolationForest': isolfor_hyperparams
     }
 
@@ -51,7 +63,7 @@ for key, value in hyperparams_dict.items():
     print(f'Total iterations: {total_product}\n')
     
 # Save hyperparams_dict as a JSON file
-save_file = join(rootdir, 'conf', 'maneuver_detection.json')
+save_file = join(rootdir, 'conf', 'hyperparam_optimization.json')
 with open(save_file, 'w') as json_file:
     json.dump(hyperparams_dict, json_file, indent=2)
 

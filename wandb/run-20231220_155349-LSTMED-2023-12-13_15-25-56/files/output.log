@@ -1,0 +1,8 @@
+2023-12-20 15:53:50 - WARNING - (ManeuverDetection:332): Starting hyperparameter optimization for LSTMED. 128 combinations to test.
+  0%|                                                                                                                                                                         | 0/128 [00:00<?, ?it/s]2023-12-20 15:53:50 - INFO - (ManeuverDetection:340): 107/128: hidden_size: 1 | sequence_len: 10 | n_layers: [1, 1] | dropout: [0, 0] | lr: 0.0005 | batch_size: 256 | num_epochs: 30
+
+
+
+
+
+

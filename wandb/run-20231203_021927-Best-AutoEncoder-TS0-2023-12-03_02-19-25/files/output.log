@@ -1,0 +1,114 @@
+Building AE with input 6, hidden size 11, layer sizes (15, 10, 5)
+ |                                        | 0.2% Complete, Loss 0.0024
+ |                                        | 0.4% Complete, Loss 0.0024
+ |                                        | 0.6% Complete, Loss 0.0024
+ |                                        | 0.8% Complete, Loss 0.0024
+ |                                        | 1.0% Complete, Loss 0.0023
+ |                                        | 1.2% Complete, Loss 0.0022
+ |                                        | 1.4% Complete, Loss 0.0021
+ |                                        | 1.6% Complete, Loss 0.0021
+ |                                        | 1.8% Complete, Loss 0.0020
+ |                                        | 2.0% Complete, Loss 0.0020
+ |                                        | 2.2% Complete, Loss 0.0019
+ |                                        | 2.4% Complete, Loss 0.0018
+ |=                                       | 2.6% Complete, Loss 0.0018
+ |=                                       | 2.8% Complete, Loss 0.0017
+ |=                                       | 3.0% Complete, Loss 0.0017
+ |=                                       | 3.2% Complete, Loss 0.0017
+ |=                                       | 3.4% Complete, Loss 0.0016
+ |=                                       | 3.6% Complete, Loss 0.0016
+ |=                                       | 3.8% Complete, Loss 0.0016
+ |=                                       | 4.0% Complete, Loss 0.0015
+ |=                                       | 4.2% Complete, Loss 0.0015
+ |=                                       | 4.4% Complete, Loss 0.0015
+ |=                                       | 4.6% Complete, Loss 0.0014
+ |=                                       | 4.8% Complete, Loss 0.0014
+ |==                                      | 5.0% Complete, Loss 0.0014
+ |==                                      | 5.2% Complete, Loss 0.0014
+ |==                                      | 5.4% Complete, Loss 0.0014
+ |==                                      | 5.6% Complete, Loss 0.0014
+ |==                                      | 5.8% Complete, Loss 0.0014
+ |==                                      | 6.0% Complete, Loss 0.0014
+ |==                                      | 6.2% Complete, Loss 0.0014
+ |==                                      | 6.4% Complete, Loss 0.0014
+ |==                                      | 6.6% Complete, Loss 0.0014
+ |==                                      | 6.8% Complete, Loss 0.0014
+ |==                                      | 7.0% Complete, Loss 0.0013
+ |==                                      | 7.2% Complete, Loss 0.0013
+ |==                                      | 7.4% Complete, Loss 0.0013
+ |===                                     | 7.6% Complete, Loss 0.0013
+ |===                                     | 7.8% Complete, Loss 0.0013
+ |===                                     | 8.0% Complete, Loss 0.0013
+ |===                                     | 8.2% Complete, Loss 0.0013
+ |===                                     | 8.4% Complete, Loss 0.0013
+ |===                                     | 8.6% Complete, Loss 0.0013
+ |===                                     | 8.8% Complete, Loss 0.0013
+ |===                                     | 9.0% Complete, Loss 0.0012
+ |===                                     | 9.2% Complete, Loss 0.0012
+ |===                                     | 9.4% Complete, Loss 0.0012
+ |===                                     | 9.6% Complete, Loss 0.0012
+ |===                                     | 9.8% Complete, Loss 0.0012
+ |====                                    | 10.0% Complete, Loss 0.0012
+ |====                                    | 10.2% Complete, Loss 0.0011
+ |====                                    | 10.4% Complete, Loss 0.0011
+ |====                                    | 10.6% Complete, Loss 0.0011
+ |====                                    | 10.8% Complete, Loss 0.0011
+ |====                                    | 11.0% Complete, Loss 0.0011
+ |====                                    | 11.2% Complete, Loss 0.0011
+ |====                                    | 11.4% Complete, Loss 0.0010
+ |====                                    | 11.6% Complete, Loss 0.0010
+ |====                                    | 11.8% Complete, Loss 0.0010
+ |====                                    | 12.0% Complete, Loss 0.0010
+ |====                                    | 12.2% Complete, Loss 0.0010
+ |====                                    | 12.4% Complete, Loss 0.0010
+ |=====                                   | 12.6% Complete, Loss 0.0010
+ |=====                                   | 12.8% Complete, Loss 0.0010
+ |=====                                   | 13.0% Complete, Loss 0.0009
+ |=====                                   | 13.2% Complete, Loss 0.0009
+ |=====                                   | 13.4% Complete, Loss 0.0009
+ |=====                                   | 13.6% Complete, Loss 0.0009
+ |=====                                   | 13.8% Complete, Loss 0.0009
+ |=====                                   | 14.0% Complete, Loss 0.0009
+ |=====                                   | 14.2% Complete, Loss 0.0008
+ |=====                                   | 14.4% Complete, Loss 0.0008
+ |=====                                   | 14.6% Complete, Loss 0.0008
+ |=====                                   | 14.8% Complete, Loss 0.0008
+ |======                                  | 15.0% Complete, Loss 0.0008
+ |======                                  | 15.2% Complete, Loss 0.0008
+ |======                                  | 15.4% Complete, Loss 0.0008
+ |======                                  | 15.6% Complete, Loss 0.0009
+ |======                                  | 15.8% Complete, Loss 0.0008
+ |======                                  | 16.0% Complete, Loss 0.0008
+ |======                                  | 16.2% Complete, Loss 0.0008
+ |======                                  | 16.4% Complete, Loss 0.0008
+ |======                                  | 16.6% Complete, Loss 0.0007
+ |======                                  | 16.8% Complete, Loss 0.0007
+ |======                                  | 17.0% Complete, Loss 0.0007
+ |======                                  | 17.2% Complete, Loss 0.0007
+ |======                                  | 17.4% Complete, Loss 0.0007
+Traceback (most recent call last):
+  File "/root/dev/Merlion/maneuvers-adaptation/ManeuverDetection.py", line 436, in <module>
+    md.single_model_train(model_type=model_type, model_kwargs=best_models_kargs[model_type])
+  File "/root/dev/Merlion/maneuvers-adaptation/ManeuverDetection.py", line 372, in single_model_train
+    train_precision, train_recall, train_f1, train_f2, train_mttd = self.eval(model, train_data, train_labels)
+                                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/dev/Merlion/maneuvers-adaptation/ManeuverDetection.py", line 151, in eval
+    labels = model.get_anomaly_label(test_data)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/dev/Merlion/merlion/models/anomaly/base.py", line 286, in get_anomaly_label
+    scores = self.get_anomaly_score(time_series, time_series_prev)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/dev/Merlion/merlion/models/anomaly/base.py", line 268, in get_anomaly_score
+    anom_scores = self._get_anomaly_score(time_series, time_series_prev)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/dev/Merlion/merlion/models/anomaly/autoencoder.py", line 169, in _get_anomaly_score
+    for y, _, _, _ in loader:
+  File "/root/dev/Merlion/merlion/models/utils/rolling_window_dataset.py", line 218, in __iter__
+    batch.append(self[i])
+                 ~~~~^^^
+  File "/root/dev/Merlion/merlion/models/utils/rolling_window_dataset.py", line 262, in __getitem__
+    past_timestamp = self.timestamp[past_start:past_end]
+                     ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/sys843_env/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 5349, in __getitem__
+    def __getitem__(self, key):
+KeyboardInterrupt

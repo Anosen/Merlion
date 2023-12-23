@@ -1,0 +1,31 @@
+
+  0%|                                                                                                                                                                                  | 0/192 [00:00<?, ?it/s]
+Building AE with input 6, hidden size 1, layer sizes (25, 10, 5)
+
+
+
+
+
+
+
+  0%|                                                                                                                                                                                  | 0/192 [00:00<?, ?it/s]Failed to enable GUI event loop integration for 'qt'
+Traceback (most recent call last):
+  File "/root/.vscode-server/extensions/ms-python.python-2023.20.0/pythonFiles/lib/python/debugpy/_vendored/pydevd/pydev_ipython/matplotlibtools.py", line 30, in do_enable_gui
+    enable_gui(guiname)
+  File "/root/.vscode-server/extensions/ms-python.python-2023.20.0/pythonFiles/lib/python/debugpy/_vendored/pydevd/pydev_ipython/inputhook.py", line 540, in enable_gui
+    return gui_hook(app)
+           ^^^^^^^^^^^^^
+  File "/root/.vscode-server/extensions/ms-python.python-2023.20.0/pythonFiles/lib/python/debugpy/_vendored/pydevd/pydev_ipython/inputhook.py", line 176, in enable_qt
+    from pydev_ipython.qt_for_kernel import QT_API, QT_API_PYQT5
+  File "/root/.vscode-server/extensions/ms-python.python-2023.20.0/pythonFiles/lib/python/debugpy/_vendored/pydevd/pydev_ipython/qt_for_kernel.py", line 116, in <module>
+    QtCore, QtGui, QtSvg, QT_API = load_qt(api_opts)
+                                   ^^^^^^^^^^^^^^^^^
+  File "/root/.vscode-server/extensions/ms-python.python-2023.20.0/pythonFiles/lib/python/debugpy/_vendored/pydevd/pydev_ipython/qt_loaders.py", line 276, in load_qt
+    if not can_import(api):
+           ^^^^^^^^^^^^^^^
+  File "/root/.vscode-server/extensions/ms-python.python-2023.20.0/pythonFiles/lib/python/debugpy/_vendored/pydevd/pydev_ipython/qt_loaders.py", line 152, in can_import
+    if not has_binding(api):
+           ^^^^^^^^^^^^^^^^
+  File "/root/.vscode-server/extensions/ms-python.python-2023.20.0/pythonFiles/lib/python/debugpy/_vendored/pydevd/pydev_ipython/qt_loaders.py", line 115, in has_binding
+    import imp
+ |========================================| 100.0% Complete, Loss 0.0024

@@ -1,19 +1,35 @@
-import wandb
-import pandas as pd
-api = wandb.Api()
-run = pd.DataFrame(api.run("/gregoire-marie/MerlionAnomalyDetector/runs/VAE-2023-12-01_00-40-36").history())
+import numpy as np
+import matplotlib
+matplotlib.use('TkAgg')
+import matplotlib.pyplot as plt
+from scipy.stats import gaussian_kde
 
-run.drop(columns=['_timestamp', '_runtime'], inplace=True)
-run.set_index('_step', inplace=True)
-print(run.sort_values(by='f2', ascending=False))
+# thresholds_list = np.linspace(0,10,30)
+# Define the desired range (0 to 10)
+start = 0
+end = 10
+num_values = 30
 
-print(f'Columns: {run.columns}')
+# Calculate the mean and standard deviation to achieve the desired range
+mean = (start + end) / 2
+stddev = (end - start) / 4  # Using 1/4 of the range as the standard deviation
 
-print(f'latent_size: {run['latent_size'].unique()}')
-print(f'num_epochs: {run['num_epochs'].unique()}')
-print(f'batch_size: {run['batch_size'].unique()}')
-print(f'num_eval_samples: {run['num_eval_samples'].unique()}')
-print(f'lr: {run['lr'].unique()}')
-print(f'sequence_len: {run['sequence_len'].unique()}')
+# Generate a list of random numbers following a Gaussian distribution
+#thresholds_list = np.clip(np.random.normal(mean, stddev, 30), start, end)
 
-print(run[(run['latent_size']==11) & (run['sequence_len']==1) & (run['num_eval_samples']==5) & (run['lr']==0.0005)].sort_values(by='f2', ascending=False))
+# Generate a gaussian distributed list of thresholds
+mean = 3.0  # Mean of the distribution
+std_dev = 0.1  # Standard deviation of the distribution
+# Generate equally spaced percentiles between 0 and 100
+percentiles = np.linspace(0, 100, 100)
+
+# Find the values at the specified percentiles from the Gaussian distribution
+thresholds_list = np.percentile(np.random.normal(mean, std_dev, num_values), percentiles)
+
+# Clip the values to the desired range (0 to 10)
+#thresholds_list = np.clip(thresholds_list, start, end)
+
+thresholds_list.sort()
+plt.plot(thresholds_list)
+plt.show()
+plt.clf()

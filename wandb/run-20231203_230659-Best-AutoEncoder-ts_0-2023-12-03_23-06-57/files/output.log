@@ -1,0 +1,40 @@
+
+Building AE with input 6, hidden size 11, layer sizes (15, 10, 5)
+ |                                        | 0.2% Complete, Loss 0.0024
+ |                                        | 0.4% Complete, Loss 0.0024
+ |                                        | 0.6% Complete, Loss 0.0024
+ |                                        | 0.8% Complete, Loss 0.0024
+ |                                        | 1.0% Complete, Loss 0.0023
+ |                                        | 1.2% Complete, Loss 0.0022
+ |                                        | 1.4% Complete, Loss 0.0021
+ |                                        | 1.6% Complete, Loss 0.0021
+ |                                        | 1.8% Complete, Loss 0.0020
+ |                                        | 2.0% Complete, Loss 0.0020
+ |                                        | 2.2% Complete, Loss 0.0019
+ |                                        | 2.4% Complete, Loss 0.0019
+ |=                                       | 2.6% Complete, Loss 0.0017
+Traceback (most recent call last):
+  File "/root/dev/Merlion/maneuvers-adaptation/ManeuverDetection_old_working.py", line 433, in <module>
+    md.single_model_train(model_type=model_type, model_kwargs=best_models_kargs[model_type])
+  File "/root/dev/Merlion/maneuvers-adaptation/ManeuverDetection_old_working.py", line 368, in single_model_train
+    loss = model._train_one_epoch(loader)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/dev/Merlion/merlion/models/anomaly/autoencoder.py", line 122, in _train_one_epoch
+    for i, (batch, _, _, _) in enumerate(loader):
+  File "/root/dev/Merlion/merlion/models/utils/rolling_window_dataset.py", line 218, in __iter__
+    batch.append(self[i])
+                 ~~~~^^^
+  File "/root/dev/Merlion/merlion/models/utils/rolling_window_dataset.py", line 264, in __getitem__
+    future_timestamp = self.timestamp[future_start:future_end]
+                       ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/sys843_env/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 5370, in __getitem__
+    return self._getitem_slice(key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/sys843_env/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 5399, in _getitem_slice
+    result._engine._update_from_sliced(self._engine, reverse=reverse)  # type: ignore[union-attr]  # noqa: E501
+    ^^^^^^^^^^^^^^
+  File "properties.pyx", line 36, in pandas._libs.properties.CachedProperty.__get__
+  File "/root/miniconda3/envs/sys843_env/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 888, in _engine
+    return self._engine_type(target_values)  # type: ignore[arg-type]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

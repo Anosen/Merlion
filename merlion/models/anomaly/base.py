@@ -294,6 +294,7 @@ class DetectorBase(ModelBase):
         filter_scores=True,
         plot_time_series_prev=False,
         fig: Figure = None,
+        index,
         **kwargs,
     ) -> Figure:
         """
@@ -315,15 +316,15 @@ class DetectorBase(ModelBase):
 
         # Get the severity level associated with each value & convert things to
         # numpy arrays as well
-        assert time_series.dim == 1, (
-            f"Plotting only supported for univariate time series, but got a"
-            f"time series of dimension {time_series.dim}"
-        )
-        time_series = time_series.univariates[time_series.names[0]]
+        # assert time_series.dim == 1, (
+        #     f"Plotting only supported for univariate time series, but got a"
+        #     f"time series of dimension {time_series.dim}"
+        # )
+        time_series = time_series.univariates[time_series.names[index]]
 
         if fig is None:
             if time_series_prev is not None and plot_time_series_prev:
-                k = time_series_prev.names[0]
+                k = time_series_prev.names[index]
                 time_series_prev = time_series_prev.univariates[k]
             elif not plot_time_series_prev:
                 time_series_prev = None
@@ -343,6 +344,7 @@ class DetectorBase(ModelBase):
         plot_time_series_prev=False,
         figsize=(1000, 600),
         ax=None,
+        index=0
     ):
         """
         Plots the time series in matplotlib as a line graph, with points in the
@@ -360,13 +362,14 @@ class DetectorBase(ModelBase):
         :param ax: matplotlib axes to add this plot to
         :return: matplotlib figure & axes
         """
-        metric_name = time_series.names[0]
+        metric_name = time_series.names[index]
         title = f"{type(self).__name__}: Anomalies in {metric_name}"
         fig = self.get_figure(
             time_series=time_series,
             time_series_prev=time_series_prev,
             filter_scores=filter_scores,
             plot_time_series_prev=plot_time_series_prev,
+            index=index
         )
         return fig.plot(title=title, figsize=figsize, ax=ax)
 

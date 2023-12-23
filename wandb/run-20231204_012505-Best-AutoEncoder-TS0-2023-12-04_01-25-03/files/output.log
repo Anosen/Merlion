@@ -1,0 +1,56 @@
+Building AE with input 6, hidden size 11, layer sizes (15, 10, 5)
+ |                                        | 0.2% Complete, Loss 0.0024
+ |                                        | 0.4% Complete, Loss 0.0024
+ |                                        | 0.6% Complete, Loss 0.0024
+ |                                        | 0.8% Complete, Loss 0.0024
+ |                                        | 1.0% Complete, Loss 0.0023
+ |                                        | 1.2% Complete, Loss 0.0022
+ |                                        | 1.4% Complete, Loss 0.0021
+ |                                        | 1.6% Complete, Loss 0.0020
+ |                                        | 1.8% Complete, Loss 0.0020
+ |                                        | 2.0% Complete, Loss 0.0019
+ |                                        | 2.2% Complete, Loss 0.0019
+ |                                        | 2.4% Complete, Loss 0.0018
+ |=                                       | 2.6% Complete, Loss 0.0018
+ |=                                       | 2.8% Complete, Loss 0.0017
+ |=                                       | 3.0% Complete, Loss 0.0017
+ |=                                       | 3.2% Complete, Loss 0.0017
+ |=                                       | 3.4% Complete, Loss 0.0017
+ |=                                       | 3.6% Complete, Loss 0.0016
+ |=                                       | 3.8% Complete, Loss 0.0016
+ |=                                       | 4.0% Complete, Loss 0.0016
+ |=                                       | 4.2% Complete, Loss 0.0016
+ |=                                       | 4.4% Complete, Loss 0.0015
+ |=                                       | 4.6% Complete, Loss 0.0015
+ |=                                       | 4.8% Complete, Loss 0.0014
+ |==                                      | 5.0% Complete, Loss 0.0014
+ |==                                      | 5.2% Complete, Loss 0.0014
+ |==                                      | 5.4% Complete, Loss 0.0014
+ |==                                      | 5.6% Complete, Loss 0.0014
+ |==                                      | 5.8% Complete, Loss 0.0013
+ |==                                      | 6.0% Complete, Loss 0.0013
+ |==                                      | 6.2% Complete, Loss 0.0013
+ |==                                      | 6.4% Complete, Loss 0.0013
+ |==                                      | 6.6% Complete, Loss 0.0013
+ |==                                      | 6.8% Complete, Loss 0.0012
+ |==                                      | 7.0% Complete, Loss 0.0012
+ |==                                      | 7.2% Complete, Loss 0.0012
+ |==                                      | 7.4% Complete, Loss 0.0012
+ |===                                     | 7.6% Complete, Loss 0.0012
+Traceback (most recent call last):
+  File "/root/dev/Merlion/maneuvers-adaptation/ManeuverDetection copy.py", line 454, in <module>
+    md.single_model_train(model_type=model_type, model_kwargs=best_models_kargs[model_type])
+  File "/root/dev/Merlion/maneuvers-adaptation/ManeuverDetection copy.py", line 385, in single_model_train
+    loss = model._train_one_epoch(loader)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/dev/Merlion/merlion/models/anomaly/autoencoder.py", line 140, in _train_one_epoch
+    for i, (batch, _, _, _) in enumerate(loader):
+  File "/root/dev/Merlion/merlion/models/utils/rolling_window_dataset.py", line 218, in __iter__
+    batch.append(self[i])
+                 ~~~~^^^
+  File "/root/dev/Merlion/merlion/models/utils/rolling_window_dataset.py", line 264, in __getitem__
+    future_timestamp = self.timestamp[future_start:future_end]
+                       ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/sys843_env/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 5349, in __getitem__
+    def __getitem__(self, key):
+KeyboardInterrupt

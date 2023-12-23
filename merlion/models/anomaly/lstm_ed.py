@@ -90,7 +90,7 @@ class LSTMED(DetectorBase):
         assert len(self.n_layers) == len(self.dropout), "Param dropout should contain two values"
 
         self.device = "cuda" if torch.cuda.is_available() else "cpu"
-        self.lstmed = None
+        self.model = None
         self.data_dim = None
 
     @property
@@ -104,8 +104,38 @@ class LSTMED(DetectorBase):
     def _build_model(self, dim):
         return LSTMEDModule(dim, self.hidden_size, self.n_layers, self.dropout, self.device)
 
+    def setup_model(self, train_data: pd.DataFrame):
+        """
+        Sets up the model with train data.
+        """
+        # Create a data loader
+        self.loader = RollingWindowDataset(
+            train_data,
+            target_seq_index=None,
+            shuffle=True,
+            flatten=False,
+            n_past=self.sequence_length,
+            n_future=0,
+            batch_size=self.batch_size,
+        )
+        self.optimizer = torch.optim.Adam(self.model.parameters(), lr=self.lr)
+        self.loss_func = torch.nn.MSELoss(reduction="sum")
+        
+    def _train_one_epoch(self):
+        self.model.train()
+        total_loss = 0
+        for batch, _, _, _ in self.loader:
+            batch = torch.tensor(batch, dtype=torch.float, device=self.device)
+            output = self.model(batch)
+            loss = self.loss_func(output, batch)
+            self.optimizer.zero_grad()
+            loss.backward()
+            self.optimizer.step()
+            total_loss += loss
+        return total_loss/self.loader.n_points
+
     def _train(self, train_data: pd.DataFrame, train_config=None) -> pd.DataFrame:
-        train_loader = RollingWindowDataset(
+        self.loader = RollingWindowDataset(
             train_data,
             target_seq_index=None,
             shuffle=True,
@@ -115,28 +145,21 @@ class LSTMED(DetectorBase):
             batch_size=self.batch_size,
         )
         self.data_dim = train_data.shape[1]
-        self.lstmed = self._build_model(train_data.shape[1]).to(self.device)
-        optimizer = torch.optim.Adam(self.lstmed.parameters(), lr=self.lr)
-        loss_func = torch.nn.MSELoss(reduction="sum")
+        self.model = self._build_model(train_data.shape[1]).to(self.device)
+        self.optimizer = torch.optim.Adam(self.model.parameters(), lr=self.lr)
+        self.loss_func = torch.nn.MSELoss(reduction="sum")
         bar = ProgressBar(total=self.num_epochs)
 
-        self.lstmed.train()
+        self.model.train()
         for epoch in range(self.num_epochs):
-            total_loss = 0
-            for batch, _, _, _ in train_loader:
-                batch = torch.tensor(batch, dtype=torch.float, device=self.device)
-                output = self.lstmed(batch)
-                loss = loss_func(output, batch)
-                self.lstmed.zero_grad()
-                loss.backward()
-                optimizer.step()
-                total_loss += loss
+            loss = self._train_one_epoch()
             if bar is not None:
-                bar.print(epoch + 1, prefix="", suffix="Complete, Loss {:.4f}".format(total_loss / len(train_loader)))
+                bar.print(epoch + 1, prefix="", suffix="Complete, Loss {:.4f}".format(loss))
+            self.total_loss=loss
         return self._get_anomaly_score(train_data)
 
     def _get_anomaly_score(self, time_series: pd.DataFrame, time_series_prev: pd.DataFrame = None) -> pd.DataFrame:
-        self.lstmed.eval()
+        self.model.eval()
         ts = pd.concat((time_series_prev, time_series)) if time_series_prev is None else time_series
         data_loader = RollingWindowDataset(
             ts,
@@ -150,9 +173,11 @@ class LSTMED(DetectorBase):
         scores, outputs = [], []
         for idx, (batch, _, _, _) in enumerate(data_loader):
             batch = torch.tensor(batch, dtype=torch.float, device=self.device)
-            output = self.lstmed(batch)
+            output = self.model(batch)
             error = nn.L1Loss(reduction="none")(output, batch)
+            tmp = error.view(-1, ts.shape[1]).data.cpu().numpy()
             score = np.mean(error.view(-1, ts.shape[1]).data.cpu().numpy(), axis=1)
+            tmp = score.reshape(batch.shape[0], self.sequence_length)
             scores.append(score.reshape(batch.shape[0], self.sequence_length))
 
         scores = np.concatenate(scores)

@@ -1,0 +1,51 @@
+wandb_version: 1
+
+model:
+  desc: null
+  value: AutoEncoder
+hyperparameters:
+  desc: null
+  value:
+    hidden_size: 11
+    layer_sizes:
+    - 15
+    - 10
+    - 5
+    sequence_len: 1
+    lr: 0.01
+    batch_size: 512
+    num_epochs: 500
+    alm_threshold: 2.1
+dataset:
+  desc: null
+  value: 'residues ts start_date: 948257548.0'
+_wandb:
+  desc: null
+  value:
+    python_version: 3.12.0
+    cli_version: 0.15.12
+    framework: torch
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    start_time: 1701664479.339987
+    t:
+      1:
+      - 1
+      - 5
+      - 53
+      - 55
+      2:
+      - 1
+      - 5
+      - 53
+      - 55
+      3:
+      - 2
+      - 14
+      - 16
+      - 23
+      4: 3.12.0
+      5: 0.15.12
+      8:
+      - 5
+      13: linux-x86_64

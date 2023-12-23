@@ -1,0 +1,146 @@
+2023-12-13 15:23:19 - WARNING - (ManeuverDetection:328): Starting hyperparameter optimization for LSTMED. 48 combinations to test.
+  0%|                                                                                                                                                                                      | 0/48 [00:00<?, ?it/s]2023-12-13 15:23:19 - INFO - (ManeuverDetection:336): 1/48: hidden_size: 1 | sequence_len: 10 | n_layers: [1, 1] | dropout: [0, 0] | lr: 0.0005 | batch_size: 256 | num_epochs: 30
+
+
+ |========================================| 100.0% Complete, Loss 79.0401
+
+
+ |========================================| 100.0% Complete, Loss 77.1925
+
+
+ |========================================| 100.0% Complete, Loss 75.1729
+
+
+
+ |========================================| 100.0% Complete, Loss 80.8000
+
+
+ |========================================| 100.0% Complete, Loss 59.8852
+
+
+ |========================================| 100.0% Complete, Loss 72.1245
+
+
+ |========================================| 100.0% Complete, Loss 57.4643
+
+
+ |================================        | 80.0% Complete, Loss 64.5302
+2023-12-13 15:24:11 - INFO - (ManeuverDetection:351): New best LSTMED:
+{'alm_threshold': 1.8,
+ 'batch_size': 256,
+ 'dropout': [0, 0],
+ 'hidden_size': 1,
+ 'lr': 0.0005,
+ 'n_layers': [1, 1],
+ 'num_epochs': 30,
+ 'sequence_len': 10}
+Configuration;
+{'f1': 0.2851340202677715,
+ 'f2': 0.25467576104431844,
+ 'loss': 70.64431428909302,
+ 'mttd': 146025.25,
+ 'precision': 0.39867903181156195,
+ 'recall': 0.2481986325385694,
+ 'train_time': 6.160610999999999}
+ |========================================| 100.0% Complete, Loss 63.4750
+
+
+
+ |========================================| 100.0% Complete, Loss 68.1316
+
+
+ |========================================| 100.0% Complete, Loss 66.4814
+
+
+
+ |========================================| 100.0% Complete, Loss 65.7888
+
+
+ |========================================| 100.0% Complete, Loss 68.7093
+
+
+ |========================================| 100.0% Complete, Loss 68.7112
+
+
+
+ |========================================| 100.0% Complete, Loss 62.7094
+
+
+ |========================================| 100.0% Complete, Loss 52.2152
+
+
+ |=================================       | 83.3% Complete, Loss 59.6733
+2023-12-13 15:25:05 - INFO - (ManeuverDetection:351): New best LSTMED:
+{'alm_threshold': 1.8,
+ 'batch_size': 256,
+ 'dropout': [0, 0],
+ 'hidden_size': 1,
+ 'lr': 0.001,
+ 'n_layers': [1, 1],
+ 'num_epochs': 30,
+ 'sequence_len': 10}
+Configuration;
+{'f1': 0.2364426572449682,
+ 'f2': 0.20887904915871877,
+ 'loss': 63.900527000427246,
+ 'mttd': 149152.125,
+ 'precision': 0.4650779342185592,
+ 'recall': 0.2182949764120872,
+ 'train_time': 6.3675602499999995}
+ |========================================| 100.0% Complete, Loss 58.4572
+
+
+
+ |========================================| 100.0% Complete, Loss 58.4739
+
+
+ |========================================| 100.0% Complete, Loss 57.7822
+
+
+ |========================================| 100.0% Complete, Loss 57.9175
+ |==                                      | 6.7% Complete, Loss 69.1773
+  4%|███████▎                                                                                                                                                                      | 2/48 [02:06<48:31, 63.30s/it]
+Traceback (most recent call last):
+  File "/root/dev/Merlion/maneuvers-adaptation/ManeuverDetection.py", line 511, in <module>
+    main()
+  File "/root/dev/Merlion/maneuvers-adaptation/ManeuverDetection.py", line 508, in main
+    md.hyperparam_opti(model_type)
+  File "/root/dev/Merlion/maneuvers-adaptation/ManeuverDetection.py", line 339, in hyperparam_opti
+    metrics = self.run_dataset_average(model_type, model_kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/dev/Merlion/maneuvers-adaptation/ManeuverDetection.py", line 278, in run_dataset_average
+    precision, recall, f1, f2, mttd, train_time = self.train_eval(model, train_data, test_data, test_labels, train_labels=train_labels)
+                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/dev/Merlion/maneuvers-adaptation/ManeuverDetection.py", line 221, in train_eval
+    train_time, train_scores = self.train(model, train_data, train_labels=train_labels)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/dev/Merlion/maneuvers-adaptation/ManeuverDetection.py", line 194, in train
+    train_scores = model.train(train_data, anomaly_labels=train_labels)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/dev/Merlion/merlion/models/anomaly/base.py", line 199, in train
+    train_result = call_with_accepted_kwargs(  # For ensembles
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/dev/Merlion/merlion/utils/misc.py", line 177, in call_with_accepted_kwargs
+    return fn(**kwargs)
+           ^^^^^^^^^^^^
+  File "/root/dev/Merlion/merlion/models/anomaly/lstm_ed.py", line 155, in _train
+    loss = self._train_one_epoch()
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/dev/Merlion/merlion/models/anomaly/lstm_ed.py", line 127, in _train_one_epoch
+    for batch, _, _, _ in self.loader:
+  File "/root/dev/Merlion/merlion/models/utils/rolling_window_dataset.py", line 218, in __iter__
+    batch.append(self[i])
+                 ~~~~^^^
+  File "/root/dev/Merlion/merlion/models/utils/rolling_window_dataset.py", line 262, in __getitem__
+    past_timestamp = self.timestamp[past_start:past_end]
+                     ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/sys843_env/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 5370, in __getitem__
+    return self._getitem_slice(key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/sys843_env/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 5396, in _getitem_slice
+    result = type(self)._simple_new(res, name=self._name, refs=self._references)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/sys843_env/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 669, in _simple_new
+    result._references.add_index_reference(result)
+
+ |====                                    | 10.0% Complete, Loss 67.7227

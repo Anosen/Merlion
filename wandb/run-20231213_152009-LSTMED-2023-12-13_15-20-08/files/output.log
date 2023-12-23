@@ -1,0 +1,113 @@
+2023-12-13 15:20:16 - WARNING - (ManeuverDetection:328): Starting hyperparameter optimization for LSTMED. 48 combinations to test.
+  0%|                                                                                                                                                                                      | 0/48 [00:00<?, ?it/s]2023-12-13 15:20:16 - INFO - (ManeuverDetection:336): 1/48: hidden_size: 1 | sequence_len: 10 | n_layers: [1, 1] | dropout: [0, 0] | lr: 0.0005 | batch_size: 256 | num_epochs: 30
+
+
+ |========================================| 100.0% Complete, Loss 71.8435
+
+
+
+ |========================================| 100.0% Complete, Loss 79.4233
+
+
+ |========================================| 100.0% Complete, Loss 72.2860
+
+
+
+ |========================================| 100.0% Complete, Loss 74.9524
+
+
+ |========================================| 100.0% Complete, Loss 68.5039
+
+
+ |========================================| 100.0% Complete, Loss 73.5376
+
+
+
+ |========================================| 100.0% Complete, Loss 59.0645
+
+
+ |====================================    | 90.0% Complete, Loss 59.2455
+2023-12-13 15:21:12 - INFO - (ManeuverDetection:351): New best LSTMED:
+{'alm_threshold': 1.8,
+ 'batch_size': 256,
+ 'dropout': [0, 0],
+ 'hidden_size': 1,
+ 'lr': 0.0005,
+ 'n_layers': [1, 1],
+ 'num_epochs': 30,
+ 'sequence_len': 10}
+Configuration;
+{'f1': 0.25273380431449494,
+ 'f2': 0.23447588152432028,
+ 'loss': 69.8007025718689,
+ 'mttd': 137432.5,
+ 'precision': 0.41828321474918334,
+ 'recall': 0.24292382538569424,
+ 'train_time': 6.5829604999999995}
+ |========================================| 100.0% Complete, Loss 58.7944
+
+
+
+ |========================================| 100.0% Complete, Loss 73.4431
+
+
+ |========================================| 100.0% Complete, Loss 67.2226
+
+
+ |========================================| 100.0% Complete, Loss 63.9893
+
+
+
+ |========================================| 100.0% Complete, Loss 67.6102
+
+
+
+ |========================================| 100.0% Complete, Loss 51.2199
+ |=============                           | 33.3% Complete, Loss 74.4958
+  2%|███▌                                                                                                                                                                        | 1/48 [01:32<1:12:31, 92.59s/it]
+Traceback (most recent call last):
+  File "/root/dev/Merlion/maneuvers-adaptation/ManeuverDetection.py", line 511, in <module>
+    main()
+  File "/root/dev/Merlion/maneuvers-adaptation/ManeuverDetection.py", line 508, in main
+    md.hyperparam_opti(model_type)
+  File "/root/dev/Merlion/maneuvers-adaptation/ManeuverDetection.py", line 339, in hyperparam_opti
+    metrics = self.run_dataset_average(model_type, model_kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/dev/Merlion/maneuvers-adaptation/ManeuverDetection.py", line 278, in run_dataset_average
+    precision, recall, f1, f2, mttd, train_time = self.train_eval(model, train_data, test_data, test_labels, train_labels=train_labels)
+                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/dev/Merlion/maneuvers-adaptation/ManeuverDetection.py", line 221, in train_eval
+    train_time, train_scores = self.train(model, train_data, train_labels=train_labels)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/dev/Merlion/maneuvers-adaptation/ManeuverDetection.py", line 194, in train
+    train_scores = model.train(train_data, anomaly_labels=train_labels)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/dev/Merlion/merlion/models/anomaly/base.py", line 199, in train
+    train_result = call_with_accepted_kwargs(  # For ensembles
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/dev/Merlion/merlion/utils/misc.py", line 177, in call_with_accepted_kwargs
+    return fn(**kwargs)
+           ^^^^^^^^^^^^
+  File "/root/dev/Merlion/merlion/models/anomaly/lstm_ed.py", line 155, in _train
+    loss = self._train_one_epoch()
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/dev/Merlion/merlion/models/anomaly/lstm_ed.py", line 127, in _train_one_epoch
+    for batch, _, _, _ in self.loader:
+  File "/root/dev/Merlion/merlion/models/utils/rolling_window_dataset.py", line 218, in __iter__
+    batch.append(self[i])
+                 ~~~~^^^
+  File "/root/dev/Merlion/merlion/models/utils/rolling_window_dataset.py", line 262, in __getitem__
+    past_timestamp = self.timestamp[past_start:past_end]
+                     ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/sys843_env/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 5370, in __getitem__
+    return self._getitem_slice(key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/sys843_env/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 5399, in _getitem_slice
+    result._engine._update_from_sliced(self._engine, reverse=reverse)  # type: ignore[union-attr]  # noqa: E501
+    ^^^^^^^^^^^^^^
+  File "properties.pyx", line 36, in pandas._libs.properties.CachedProperty.__get__
+  File "/root/miniconda3/envs/sys843_env/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 888, in _engine
+    return self._engine_type(target_values)  # type: ignore[arg-type]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+ |==============                          | 36.7% Complete, Loss 74.1345

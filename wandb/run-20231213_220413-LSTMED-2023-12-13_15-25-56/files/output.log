@@ -1,0 +1,66 @@
+2023-12-13 22:04:14 - WARNING - (ManeuverDetection:329): Starting hyperparameter optimization for LSTMED. 128 combinations to test.
+  0%|                                                                                                                                                                                     | 0/128 [00:00<?, ?it/s]2023-12-13 22:04:14 - INFO - (ManeuverDetection:337): 107/128: hidden_size: 1 | sequence_len: 10 | n_layers: [1, 1] | dropout: [0, 0] | lr: 0.0005 | batch_size: 256 | num_epochs: 30
+
+
+
+ |========================================| 100.0% Complete, Loss 85.1873
+
+
+ |========================================| 100.0% Complete, Loss 76.9978
+
+
+ |========================================| 100.0% Complete, Loss 68.3663
+
+
+ |========================================| 100.0% Complete, Loss 69.4394
+
+
+
+ |========================================| 100.0% Complete, Loss 55.0700
+
+
+ |========================================| 100.0% Complete, Loss 70.9854
+
+
+ |=================================       | 83.3% Complete, Loss 65.5037
+  0%|                                                                                                                                                                                     | 0/128 [00:45<?, ?it/s]
+Traceback (most recent call last):
+  File "/root/dev/Merlion/maneuvers-adaptation/ManeuverDetection.py", line 512, in <module>
+    main()
+  File "/root/dev/Merlion/maneuvers-adaptation/ManeuverDetection.py", line 509, in main
+    md.hyperparam_opti(model_type)
+  File "/root/dev/Merlion/maneuvers-adaptation/ManeuverDetection.py", line 340, in hyperparam_opti
+    metrics = self.run_dataset_average(model_type, model_kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/dev/Merlion/maneuvers-adaptation/ManeuverDetection.py", line 279, in run_dataset_average
+    precision, recall, f1, f2, mttd, train_time = self.train_eval(model, train_data, test_data, test_labels, train_labels=train_labels)
+                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/dev/Merlion/maneuvers-adaptation/ManeuverDetection.py", line 222, in train_eval
+    train_time, train_scores = self.train(model, train_data, train_labels=train_labels)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/dev/Merlion/maneuvers-adaptation/ManeuverDetection.py", line 195, in train
+    train_scores = model.train(train_data, anomaly_labels=train_labels)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/dev/Merlion/merlion/models/anomaly/base.py", line 199, in train
+    train_result = call_with_accepted_kwargs(  # For ensembles
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/dev/Merlion/merlion/utils/misc.py", line 177, in call_with_accepted_kwargs
+    return fn(**kwargs)
+           ^^^^^^^^^^^^
+  File "/root/dev/Merlion/merlion/models/anomaly/lstm_ed.py", line 155, in _train
+    loss = self._train_one_epoch()
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/dev/Merlion/merlion/models/anomaly/lstm_ed.py", line 127, in _train_one_epoch
+    for batch, _, _, _ in self.loader:
+  File "/root/dev/Merlion/merlion/models/utils/rolling_window_dataset.py", line 223, in __iter__
+    yield self.collate_batch(batch)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/dev/Merlion/merlion/models/utils/rolling_window_dataset.py", line 241, in collate_batch
+    future_ts = np.stack(future_ts)
+                ^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/sys843_env/lib/python3.12/site-packages/numpy/core/shape_base.py", line 443, in stack
+    arrays = [asanyarray(arr) for arr in arrays]
+              ^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/sys843_env/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 914, in __array__
+    def __array__(self, dtype=None) -> np.ndarray:
+KeyboardInterrupt

@@ -1,0 +1,23 @@
+2023-12-20 16:57:08 - WARNING - (ManeuverDetection:332): Starting hyperparameter optimization for LSTMED. 128 combinations to test.
+  0%|                                                                                                                                                                                            | 0/128 [00:00<?, ?it/s]2023-12-20 16:57:08 - INFO - (ManeuverDetection:340): 107/128: hidden_size: 1 | sequence_len: 10 | n_layers: [1, 1] | dropout: [0, 0] | lr: 0.0005 | batch_size: 256 | num_epochs: 30
+Failed to enable GUI event loop integration for 'qt'
+Traceback (most recent call last):
+  File "/root/.vscode-server/extensions/ms-python.python-2023.22.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/pydev_ipython/matplotlibtools.py", line 30, in do_enable_gui
+    enable_gui(guiname)
+  File "/root/.vscode-server/extensions/ms-python.python-2023.22.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/pydev_ipython/inputhook.py", line 540, in enable_gui
+    return gui_hook(app)
+           ^^^^^^^^^^^^^
+  File "/root/.vscode-server/extensions/ms-python.python-2023.22.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/pydev_ipython/inputhook.py", line 176, in enable_qt
+    from pydev_ipython.qt_for_kernel import QT_API, QT_API_PYQT5
+  File "/root/.vscode-server/extensions/ms-python.python-2023.22.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/pydev_ipython/qt_for_kernel.py", line 116, in <module>
+    QtCore, QtGui, QtSvg, QT_API = load_qt(api_opts)
+                                   ^^^^^^^^^^^^^^^^^
+  File "/root/.vscode-server/extensions/ms-python.python-2023.22.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/pydev_ipython/qt_loaders.py", line 276, in load_qt
+    if not can_import(api):
+           ^^^^^^^^^^^^^^^
+  File "/root/.vscode-server/extensions/ms-python.python-2023.22.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/pydev_ipython/qt_loaders.py", line 152, in can_import
+    if not has_binding(api):
+           ^^^^^^^^^^^^^^^^
+  File "/root/.vscode-server/extensions/ms-python.python-2023.22.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/pydev_ipython/qt_loaders.py", line 115, in has_binding
+    import imp
+ModuleNotFoundError: No module named 'imp'
