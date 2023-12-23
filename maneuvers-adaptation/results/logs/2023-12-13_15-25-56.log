@@ -6159,3 +6159,45 @@ Configuration;
 2023-12-20 16:57:08 - INFO - (ManeuverDetection:340): 107/128: hidden_size: 1 | sequence_len: 10 | n_layers: [1, 1] | dropout: [0, 0] | lr: 0.0005 | batch_size: 256 | num_epochs: 30
 2023-12-20 16:57:08 - DEBUG - (ManeuverDetection:259): ------------------------- Time series 1/8 -------------------------
 2023-12-20 16:57:08 - DEBUG - (ManeuverDetection:270): alm_threshold: 2.1 | train_start_date: 2000-01-18 23:52:28
+2023-12-22 22:54:43 - INFO - (ManeuverDetection:155): Initializing ManeuverDetection: log_wandb: True - evaluate: False
+2023-12-22 22:54:43 - DEBUG - (ManeuverDetection:156): DEBUG
+2023-12-22 22:54:44 - INFO - (ManeuverDetection:169): Fetching dataset: /root/dev/Merlion/maneuvers-adaptation/data/residues
+2023-12-22 22:54:44 - DEBUG - (ManeuverDetection:218): train_data lengths: [5131] | Smallest: 5131: 0 | Longest: 5131: 0
+2023-12-22 22:54:44 - INFO - (ManeuverDetection:219): Cropping train_data to a length of 5131
+2023-12-22 22:54:44 - DEBUG - (ManeuverDetection:218): train_labels lengths: [5203] | Smallest: 5203: 0 | Longest: 5203: 0
+2023-12-22 22:54:44 - INFO - (ManeuverDetection:219): Cropping train_labels to a length of 5203
+2023-12-22 22:54:44 - DEBUG - (ManeuverDetection:218): val_data lengths: [11178] | Smallest: 11178: 0 | Longest: 11178: 0
+2023-12-22 22:54:44 - INFO - (ManeuverDetection:219): Cropping val_data to a length of 11178
+2023-12-22 22:54:44 - DEBUG - (ManeuverDetection:218): val_labels lengths: [11218] | Smallest: 11218: 0 | Longest: 11218: 0
+2023-12-22 22:54:44 - INFO - (ManeuverDetection:219): Cropping val_labels to a length of 11218
+2023-12-22 22:54:44 - INFO - (ManeuverDetection:550): Starting training for best LSTMED with {'batch_size': 512, 'dropout': [0, 0], 'hidden_size': 6, 'lr': 0.01, 'n_layers': [1, 1], 'num_epochs': 30, 'sequence_len': 25}
+2023-12-22 22:54:44 - DEBUG - (ManeuverDetection:554): ------------------------- Time series 1/1 -------------------------
+2023-12-22 22:54:44 - DEBUG - (ManeuverDetection:565): alm_threshold: 2.2 | train_start_date: 2002-05-04 14:29:22
+2023-12-22 22:56:42 - INFO - (ManeuverDetection:155): Initializing ManeuverDetection: log_wandb: True - evaluate: False
+2023-12-22 22:56:42 - INFO - (ManeuverDetection:155): Initializing ManeuverDetection: log_wandb: True - evaluate: False
+2023-12-22 22:56:42 - DEBUG - (ManeuverDetection:156): DEBUG
+2023-12-22 22:56:42 - DEBUG - (ManeuverDetection:156): DEBUG
+2023-12-22 22:56:42 - INFO - (ManeuverDetection:169): Fetching dataset: /root/dev/Merlion/maneuvers-adaptation/data/residues
+2023-12-22 22:56:42 - INFO - (ManeuverDetection:169): Fetching dataset: /root/dev/Merlion/maneuvers-adaptation/data/residues
+2023-12-22 22:56:43 - DEBUG - (ManeuverDetection:218): train_data lengths: [5131] | Smallest: 5131: 0 | Longest: 5131: 0
+2023-12-22 22:56:43 - DEBUG - (ManeuverDetection:218): train_data lengths: [5131] | Smallest: 5131: 0 | Longest: 5131: 0
+2023-12-22 22:56:43 - INFO - (ManeuverDetection:219): Cropping train_data to a length of 5131
+2023-12-22 22:56:43 - INFO - (ManeuverDetection:219): Cropping train_data to a length of 5131
+2023-12-22 22:56:43 - DEBUG - (ManeuverDetection:218): train_labels lengths: [5203] | Smallest: 5203: 0 | Longest: 5203: 0
+2023-12-22 22:56:43 - DEBUG - (ManeuverDetection:218): train_labels lengths: [5203] | Smallest: 5203: 0 | Longest: 5203: 0
+2023-12-22 22:56:43 - INFO - (ManeuverDetection:219): Cropping train_labels to a length of 5203
+2023-12-22 22:56:43 - INFO - (ManeuverDetection:219): Cropping train_labels to a length of 5203
+2023-12-22 22:56:43 - DEBUG - (ManeuverDetection:218): val_data lengths: [11178] | Smallest: 11178: 0 | Longest: 11178: 0
+2023-12-22 22:56:43 - DEBUG - (ManeuverDetection:218): val_data lengths: [11178] | Smallest: 11178: 0 | Longest: 11178: 0
+2023-12-22 22:56:43 - INFO - (ManeuverDetection:219): Cropping val_data to a length of 11178
+2023-12-22 22:56:43 - INFO - (ManeuverDetection:219): Cropping val_data to a length of 11178
+2023-12-22 22:56:43 - DEBUG - (ManeuverDetection:218): val_labels lengths: [11218] | Smallest: 11218: 0 | Longest: 11218: 0
+2023-12-22 22:56:43 - DEBUG - (ManeuverDetection:218): val_labels lengths: [11218] | Smallest: 11218: 0 | Longest: 11218: 0
+2023-12-22 22:56:43 - INFO - (ManeuverDetection:219): Cropping val_labels to a length of 11218
+2023-12-22 22:56:43 - INFO - (ManeuverDetection:219): Cropping val_labels to a length of 11218
+2023-12-22 22:56:43 - INFO - (ManeuverDetection:550): Starting training for best LSTMED with {'batch_size': 512, 'dropout': [0, 0], 'hidden_size': 6, 'lr': 0.01, 'n_layers': [1, 1], 'num_epochs': 30, 'sequence_len': 25, 'alm_threshold': 2.2}
+2023-12-22 22:56:43 - INFO - (ManeuverDetection:550): Starting training for best LSTMED with {'batch_size': 512, 'dropout': [0, 0], 'hidden_size': 6, 'lr': 0.01, 'n_layers': [1, 1], 'num_epochs': 30, 'sequence_len': 25, 'alm_threshold': 2.2}
+2023-12-22 22:56:43 - DEBUG - (ManeuverDetection:554): ------------------------- Time series 1/1 -------------------------
+2023-12-22 22:56:43 - DEBUG - (ManeuverDetection:554): ------------------------- Time series 1/1 -------------------------
+2023-12-22 22:56:43 - DEBUG - (ManeuverDetection:565): alm_threshold: 2.2 | train_start_date: 2002-05-04 14:29:22
+2023-12-22 22:56:43 - DEBUG - (ManeuverDetection:565): alm_threshold: 2.2 | train_start_date: 2002-05-04 14:29:22

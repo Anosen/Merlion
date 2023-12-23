@@ -504,11 +504,14 @@ class ManeuverDetection():
         # Generate all combinations of hyperparameters
         hyperparam_combinations = list(itertools.product(*hyperparams.values()))
 
+        restart_index = 0
+        hyperparam_combinations = hyperparam_combinations[restart_index:]
+
         # Initialize the utility function
         best_utility_function = 0.0
 
         self.logger.warning(f'{model_type} hyperparameter optimization: {len(hyperparam_combinations)} combinations to test.')
-        for i, combination in enumerate(tqdm(hyperparam_combinations), start=0):
+        for i, combination in enumerate(tqdm(hyperparam_combinations), start=restart_index):
             self.combi_index = i
             # Update the model current configuration from the hyperparameters list
             model_kwargs = dict(zip(hyperparams.keys(), combination))
@@ -522,7 +525,7 @@ class ManeuverDetection():
             self.logger.debug(f'Metrics for:\n{model_kwargs}\n{pprint.pformat(metrics)}')
 
             # Compute the utility function average of the considered metrics
-            utility_function_variables = [metrics["f2"], metrics['train_time']]
+            utility_function_variables = [metrics["f2"]]#, metrics['train_time']]
             utility_function = sum(utility_function_variables)/len(utility_function_variables)
             
             if utility_function > best_utility_function:
@@ -596,7 +599,7 @@ class ManeuverDetection():
             # Train
             model.total_loss=0.0
             for epoch in range(model.num_epochs):
-                self.logger.debug(f"----------------- Epoch {epoch}/{model.num_epochs} -----------------")
+                #self.logger.debug(f"----------------- Epoch  -----------------")
 
                 # Check if the save directory exists, if not, create it
                 save_path = join(rootdir, 'results', 'models', model_type, 'best', noradId, f'{epoch}.pt')
@@ -611,9 +614,9 @@ class ManeuverDetection():
                     # Load the model state at the current epoch
                     model.model, model.optimizer, model_kwargs, epoch, loss = self.load_checkpoint(model.model, model.optimizer, save_path)
                     self.logger.debug(f'Loaded model at epoch {epoch} with loss {loss}')
-
-                scores, train_precision, train_recall, train_f1, train_f2, train_mttd = self.eval(model, train_data, train_labels, method='pa')
-                scores, test_precision, test_recall, test_f1, test_f2, test_mttd = self.eval(model, val_data, val_labels, method='pa')
+                score_type=ScoreType.Pointwise
+                scores, train_precision, train_recall, train_f1, train_f2, train_mttd = self.eval(model, train_data, train_labels, score_type=score_type)
+                scores, test_precision, test_recall, test_f1, test_f2, test_mttd = self.eval(model, val_data, val_labels, score_type=score_type)
                 metrics = {
                     "train_precision": train_precision,
                     "train_recall": train_recall,
@@ -626,9 +629,9 @@ class ManeuverDetection():
                     "test_f2": test_f2,
                     "test_mttd": test_mttd
                 }
-                self.logger.debug(f'Metrics:\n{pprint.pformat(metrics)}')
+                #self.logger.debug(f'Metrics:\n{pprint.pformat(metrics)}')
                 if bar is not None:
-                    bar.print(epoch, prefix="", suffix="Complete, Loss {:.4f}".format(loss))
+                    bar.print(epoch, prefix="", suffix="{}/{} | Loss {:.4f} | F2: {} | Recall: {} | Precision: {}".format(epoch, model.num_epochs, loss, metrics['test_f2'], metrics['test_recall'], metrics['test_precision']))
 
                 if not eval:
                     # Save the model state at the current epoch
@@ -665,21 +668,23 @@ best_models_kargs = {
             'batch_size': 1024,
             'num_epochs': 500
             },
-    "LSTMED": {'hidden_size': 0,
-                    'layer_sizes': (0, 0, 0),
-                    'sequence_len': 0,
-                    'lr': 0,
-                    'batch_size': 0,
-                    'num_epochs': 0}
+    "LSTMED": {'batch_size': 512,
+            'dropout': [0, 0],
+            'hidden_size': 6,
+            'lr': 0.01,
+            'n_layers': [1, 1],
+            'num_epochs': 30,
+            'sequence_len': 25
+            }
     }
 
 
 def main():
-    run_type = 'hyperparam_opti'
-    # run_type = 'train'
+    #run_type = 'hyperparam_opti'
+    run_type = 'train'
     
     for model_id in [2,2]:
-        md = ManeuverDetection(dataset=None, log_wandb=False, evaluate=False, log=True, save_log=False)
+        md = ManeuverDetection(dataset=None, log_wandb=True, evaluate=False, log=True, save_log=True)
         model_type = list(md.model_types.keys())[model_id]
         
         if run_type == 'train':
