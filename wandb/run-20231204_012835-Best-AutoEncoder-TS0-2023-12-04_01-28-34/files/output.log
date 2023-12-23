@@ -1,0 +1,99 @@
+Building AE with input 6, hidden size 11, layer sizes (15, 10, 5)
+ |                                        | 0.2% Complete, Loss 1.3114
+ |                                        | 0.4% Complete, Loss 1.3088
+ |                                        | 0.6% Complete, Loss 1.2976
+ |                                        | 0.8% Complete, Loss 1.2480
+ |                                        | 1.0% Complete, Loss 1.0742
+ |                                        | 1.2% Complete, Loss 0.7964
+ |                                        | 1.4% Complete, Loss 0.7922
+ |                                        | 1.6% Complete, Loss 0.7524
+ |                                        | 1.8% Complete, Loss 0.6896
+ |                                        | 2.0% Complete, Loss 0.5493
+ |                                        | 2.2% Complete, Loss 0.3639
+ |                                        | 2.4% Complete, Loss 0.2442
+ |=                                       | 2.6% Complete, Loss 0.1692
+ |=                                       | 2.8% Complete, Loss 0.1462
+ |=                                       | 3.0% Complete, Loss 0.1486
+ |=                                       | 3.2% Complete, Loss 0.1461
+ |=                                       | 3.4% Complete, Loss 0.1402
+ |=                                       | 3.6% Complete, Loss 0.1327
+ |=                                       | 3.8% Complete, Loss 0.1302
+ |=                                       | 4.0% Complete, Loss 0.1297
+ |=                                       | 4.2% Complete, Loss 0.1293
+ |=                                       | 4.4% Complete, Loss 0.1289
+ |=                                       | 4.6% Complete, Loss 0.1287
+ |=                                       | 4.8% Complete, Loss 0.1287
+ |==                                      | 5.0% Complete, Loss 0.1284
+ |==                                      | 5.2% Complete, Loss 0.1283
+ |==                                      | 5.4% Complete, Loss 0.1284
+ |==                                      | 5.6% Complete, Loss 0.1281
+ |==                                      | 5.8% Complete, Loss 0.1280
+ |==                                      | 6.0% Complete, Loss 0.1280
+ |==                                      | 6.2% Complete, Loss 0.1279
+ |==                                      | 6.4% Complete, Loss 0.1279
+ |==                                      | 6.6% Complete, Loss 0.1278
+ |==                                      | 6.8% Complete, Loss 0.1277
+ |==                                      | 7.0% Complete, Loss 0.1277
+ |==                                      | 7.2% Complete, Loss 0.1277
+ |==                                      | 7.4% Complete, Loss 0.1276
+ |===                                     | 7.6% Complete, Loss 0.1276
+ |===                                     | 7.8% Complete, Loss 0.1277
+ |===                                     | 8.0% Complete, Loss 0.1277
+ |===                                     | 8.2% Complete, Loss 0.1275
+ |===                                     | 8.4% Complete, Loss 0.1274
+ |===                                     | 8.6% Complete, Loss 0.1273
+ |===                                     | 8.8% Complete, Loss 0.1272
+ |===                                     | 9.0% Complete, Loss 0.1271
+ |===                                     | 9.2% Complete, Loss 0.1270
+ |===                                     | 9.4% Complete, Loss 0.1267
+ |===                                     | 9.6% Complete, Loss 0.1262
+ |===                                     | 9.8% Complete, Loss 0.1257
+ |====                                    | 10.0% Complete, Loss 0.1249
+ |====                                    | 10.2% Complete, Loss 0.1234
+ |====                                    | 10.4% Complete, Loss 0.1214
+ |====                                    | 10.6% Complete, Loss 0.1171
+ |====                                    | 10.8% Complete, Loss 0.1092
+ |====                                    | 11.0% Complete, Loss 0.1001
+ |====                                    | 11.2% Complete, Loss 0.0821
+ |====                                    | 11.4% Complete, Loss 0.0592
+ |====                                    | 11.6% Complete, Loss 0.0399
+ |====                                    | 11.8% Complete, Loss 0.0326
+ |====                                    | 12.0% Complete, Loss 0.0268
+ |====                                    | 12.2% Complete, Loss 0.0267
+ |====                                    | 12.4% Complete, Loss 0.0286
+ |=====                                   | 12.6% Complete, Loss 0.0217
+ |=====                                   | 12.8% Complete, Loss 0.0211
+ |=====                                   | 13.0% Complete, Loss 0.0185
+ |=====                                   | 13.2% Complete, Loss 0.0172
+Traceback (most recent call last):
+  File "/root/dev/Merlion/maneuvers-adaptation/ManeuverDetection.py", line 443, in <module>
+    md.single_model_train(model_type=model_type, model_kwargs=best_models_kargs[model_type])
+  File "/root/dev/Merlion/maneuvers-adaptation/ManeuverDetection.py", line 376, in single_model_train
+    test_precision, test_recall, test_f1, test_f2, test_mttd = self.eval(model, test_data, test_labels)
+                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/dev/Merlion/maneuvers-adaptation/ManeuverDetection.py", line 151, in eval
+    labels = model.get_anomaly_label(test_data)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/dev/Merlion/merlion/models/anomaly/base.py", line 286, in get_anomaly_label
+    scores = self.get_anomaly_score(time_series, time_series_prev)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/dev/Merlion/merlion/models/anomaly/base.py", line 268, in get_anomaly_score
+    anom_scores = self._get_anomaly_score(time_series, time_series_prev)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/dev/Merlion/merlion/models/anomaly/autoencoder.py", line 186, in _get_anomaly_score
+    for y, _, _, _ in loader:
+  File "/root/dev/Merlion/merlion/models/utils/rolling_window_dataset.py", line 218, in __iter__
+    batch.append(self[i])
+                 ~~~~^^^
+  File "/root/dev/Merlion/merlion/models/utils/rolling_window_dataset.py", line 264, in __getitem__
+    future_timestamp = self.timestamp[future_start:future_end]
+                       ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/sys843_env/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 5370, in __getitem__
+    return self._getitem_slice(key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/sys843_env/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 5396, in _getitem_slice
+    result = type(self)._simple_new(res, name=self._name, refs=self._references)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/sys843_env/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 669, in _simple_new
+    result._references.add_index_reference(result)
+KeyboardInterrupt

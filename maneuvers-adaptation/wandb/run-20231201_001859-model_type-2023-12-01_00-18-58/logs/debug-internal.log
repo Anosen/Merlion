@@ -1,0 +1,60 @@
+2023-12-01 00:18:59,737 INFO    StreamThr :21306 [internal.py:wandb_internal():86] W&B internal server running at pid: 21306, started at: 2023-12-01 00:18:59.736248
+2023-12-01 00:18:59,740 DEBUG   HandlerThread:21306 [handler.py:handle_request():146] handle_request: status
+2023-12-01 00:18:59,744 INFO    WriterThread:21306 [datastore.py:open_for_write():85] open: /root/dev/Merlion/maneuvers-adaptation/wandb/run-20231201_001859-model_type-2023-12-01_00-18-58/run-model_type-2023-12-01_00-18-58.wandb
+2023-12-01 00:18:59,745 DEBUG   SenderThread:21306 [sender.py:send():380] send: header
+2023-12-01 00:18:59,825 DEBUG   SenderThread:21306 [sender.py:send():380] send: run
+2023-12-01 00:18:59,827 INFO    SenderThread:21306 [sender.py:_maybe_setup_resume():759] checking resume status for None/MerlionAnomalyDetector/model_type-2023-12-01_00-18-58
+2023-12-01 00:19:00,146 INFO    SenderThread:21306 [dir_watcher.py:__init__():211] watching files in: /root/dev/Merlion/maneuvers-adaptation/wandb/run-20231201_001859-model_type-2023-12-01_00-18-58/files
+2023-12-01 00:19:00,146 INFO    SenderThread:21306 [sender.py:_start_run_threads():1122] run started: model_type-2023-12-01_00-18-58 with start time 1701407939.736642
+2023-12-01 00:19:00,156 DEBUG   HandlerThread:21306 [handler.py:handle_request():146] handle_request: check_version
+2023-12-01 00:19:00,156 DEBUG   SenderThread:21306 [sender.py:send_request():407] send_request: check_version
+2023-12-01 00:19:00,236 DEBUG   HandlerThread:21306 [handler.py:handle_request():146] handle_request: run_start
+2023-12-01 00:19:00,283 DEBUG   HandlerThread:21306 [system_info.py:__init__():32] System info init
+2023-12-01 00:19:00,283 DEBUG   HandlerThread:21306 [system_info.py:__init__():47] System info init done
+2023-12-01 00:19:00,283 INFO    HandlerThread:21306 [system_monitor.py:start():194] Starting system monitor
+2023-12-01 00:19:00,283 INFO    SystemMonitor:21306 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2023-12-01 00:19:00,284 INFO    HandlerThread:21306 [system_monitor.py:probe():214] Collecting system info
+2023-12-01 00:19:00,285 INFO    SystemMonitor:21306 [interfaces.py:start():190] Started cpu monitoring
+2023-12-01 00:19:00,285 INFO    SystemMonitor:21306 [interfaces.py:start():190] Started disk monitoring
+2023-12-01 00:19:00,286 INFO    SystemMonitor:21306 [interfaces.py:start():190] Started gpu monitoring
+2023-12-01 00:19:00,287 INFO    SystemMonitor:21306 [interfaces.py:start():190] Started memory monitoring
+2023-12-01 00:19:00,289 INFO    SystemMonitor:21306 [interfaces.py:start():190] Started network monitoring
+2023-12-01 00:19:00,307 DEBUG   HandlerThread:21306 [system_info.py:probe():196] Probing system
+2023-12-01 00:19:00,367 DEBUG   HandlerThread:21306 [system_info.py:_probe_git():181] Probing git
+2023-12-01 00:19:00,378 DEBUG   HandlerThread:21306 [system_info.py:_probe_git():189] Probing git done
+2023-12-01 00:19:00,378 DEBUG   HandlerThread:21306 [system_info.py:probe():244] Probing system done
+2023-12-01 00:19:00,378 DEBUG   HandlerThread:21306 [system_monitor.py:probe():223] {'os': 'Linux-5.15.133.1-microsoft-standard-WSL2-x86_64-with-glibc2.36', 'python': '3.12.0', 'heartbeatAt': '2023-12-01T05:19:00.307150', 'startedAt': '2023-12-01T05:18:59.728649', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '<python with no main file>', 'codePathLocal': None, 'git': {'remote': 'git@github.com:Anosen/Merlion.git', 'commit': '5a7e740a5c65666a939d6c4caee2f1233315cc24'}, 'email': 'gregoire.marie08@gmail.com', 'root': '/root/dev/Merlion', 'host': 'MSI', 'username': 'root', 'executable': '/root/miniconda3/envs/sys843_env/bin/python', 'cpu_count': 6, 'cpu_count_logical': 12, 'cpu_freq': {'current': 2592.0080000000003, 'min': 0.0, 'max': 0.0}, 'cpu_freq_per_core': [{'current': 2592.008, 'min': 0.0, 'max': 0.0}, {'current': 2592.008, 'min': 0.0, 'max': 0.0}, {'current': 2592.008, 'min': 0.0, 'max': 0.0}, {'current': 2592.008, 'min': 0.0, 'max': 0.0}, {'current': 2592.008, 'min': 0.0, 'max': 0.0}, {'current': 2592.008, 'min': 0.0, 'max': 0.0}, {'current': 2592.008, 'min': 0.0, 'max': 0.0}, {'current': 2592.008, 'min': 0.0, 'max': 0.0}, {'current': 2592.008, 'min': 0.0, 'max': 0.0}, {'current': 2592.008, 'min': 0.0, 'max': 0.0}, {'current': 2592.008, 'min': 0.0, 'max': 0.0}, {'current': 2592.008, 'min': 0.0, 'max': 0.0}], 'disk': {'/': {'total': 1006.853931427002, 'used': 17.538646697998047}}, 'gpu': 'NVIDIA GeForce RTX 3060 Laptop GPU', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 3060 Laptop GPU', 'memory_total': 6442450944}], 'memory': {'total': 7.671043395996094}}
+2023-12-01 00:19:00,378 INFO    HandlerThread:21306 [system_monitor.py:probe():224] Finished collecting system info
+2023-12-01 00:19:00,378 INFO    HandlerThread:21306 [system_monitor.py:probe():227] Publishing system info
+2023-12-01 00:19:00,378 DEBUG   HandlerThread:21306 [system_info.py:_save_pip():52] Saving list of pip packages installed into the current environment
+2023-12-01 00:19:00,378 DEBUG   HandlerThread:21306 [system_info.py:_save_pip():68] Saving pip packages done
+2023-12-01 00:19:00,378 DEBUG   HandlerThread:21306 [system_info.py:_save_conda():75] Saving list of conda packages installed into the current environment
+2023-12-01 00:19:01,148 INFO    Thread-12 :21306 [dir_watcher.py:_on_file_created():271] file/dir created: /root/dev/Merlion/maneuvers-adaptation/wandb/run-20231201_001859-model_type-2023-12-01_00-18-58/files/requirements.txt
+2023-12-01 00:19:01,148 INFO    Thread-12 :21306 [dir_watcher.py:_on_file_created():271] file/dir created: /root/dev/Merlion/maneuvers-adaptation/wandb/run-20231201_001859-model_type-2023-12-01_00-18-58/files/conda-environment.yaml
+2023-12-01 00:19:06,973 DEBUG   HandlerThread:21306 [system_info.py:_save_conda():87] Saving conda packages done
+2023-12-01 00:19:06,973 INFO    HandlerThread:21306 [system_monitor.py:probe():229] Finished publishing system info
+2023-12-01 00:19:06,974 DEBUG   HandlerThread:21306 [handler.py:handle_request():146] handle_request: status_report
+2023-12-01 00:19:06,975 DEBUG   HandlerThread:21306 [handler.py:handle_request():146] handle_request: keepalive
+2023-12-01 00:19:06,975 DEBUG   SenderThread:21306 [sender.py:send():380] send: files
+2023-12-01 00:19:06,975 INFO    SenderThread:21306 [sender.py:_save_file():1378] saving file wandb-metadata.json with policy now
+2023-12-01 00:19:06,989 DEBUG   SenderThread:21306 [sender.py:send():380] send: telemetry
+2023-12-01 00:19:07,046 DEBUG   HandlerThread:21306 [handler.py:handle_request():146] handle_request: stop_status
+2023-12-01 00:19:07,046 DEBUG   HandlerThread:21306 [handler.py:handle_request():146] handle_request: internal_messages
+2023-12-01 00:19:07,047 DEBUG   SenderThread:21306 [sender.py:send_request():407] send_request: stop_status
+2023-12-01 00:19:07,148 INFO    Thread-12 :21306 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/maneuvers-adaptation/wandb/run-20231201_001859-model_type-2023-12-01_00-18-58/files/conda-environment.yaml
+2023-12-01 00:19:07,148 INFO    Thread-12 :21306 [dir_watcher.py:_on_file_created():271] file/dir created: /root/dev/Merlion/maneuvers-adaptation/wandb/run-20231201_001859-model_type-2023-12-01_00-18-58/files/wandb-metadata.json
+2023-12-01 00:19:07,259 INFO    wandb-upload_0:21306 [upload_job.py:push():131] Uploaded file /tmp/tmpk8wzxkvfwandb/ydylzpbt-wandb-metadata.json
+2023-12-01 00:19:08,148 INFO    Thread-12 :21306 [dir_watcher.py:_on_file_created():271] file/dir created: /root/dev/Merlion/maneuvers-adaptation/wandb/run-20231201_001859-model_type-2023-12-01_00-18-58/files/output.log
+2023-12-01 00:19:10,149 INFO    Thread-12 :21306 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/maneuvers-adaptation/wandb/run-20231201_001859-model_type-2023-12-01_00-18-58/files/output.log
+2023-12-01 00:19:10,307 DEBUG   HandlerThread:21306 [handler.py:handle_request():146] handle_request: status_report
+2023-12-01 00:19:12,150 INFO    Thread-12 :21306 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/maneuvers-adaptation/wandb/run-20231201_001859-model_type-2023-12-01_00-18-58/files/output.log
+2023-12-01 00:19:14,150 INFO    Thread-12 :21306 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/maneuvers-adaptation/wandb/run-20231201_001859-model_type-2023-12-01_00-18-58/files/output.log
+2023-12-01 00:19:15,378 DEBUG   HandlerThread:21306 [handler.py:handle_request():146] handle_request: status_report
+2023-12-01 00:19:16,151 INFO    Thread-12 :21306 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/maneuvers-adaptation/wandb/run-20231201_001859-model_type-2023-12-01_00-18-58/files/output.log
+2023-12-01 00:19:18,152 INFO    Thread-12 :21306 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/maneuvers-adaptation/wandb/run-20231201_001859-model_type-2023-12-01_00-18-58/files/output.log
+2023-12-01 00:19:20,152 INFO    Thread-12 :21306 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/maneuvers-adaptation/wandb/run-20231201_001859-model_type-2023-12-01_00-18-58/files/output.log
+2023-12-01 00:19:20,493 DEBUG   HandlerThread:21306 [handler.py:handle_request():146] handle_request: status_report
+2023-12-01 00:19:21,989 DEBUG   HandlerThread:21306 [handler.py:handle_request():146] handle_request: stop_status
+2023-12-01 00:19:21,989 DEBUG   SenderThread:21306 [sender.py:send_request():407] send_request: stop_status
+2023-12-01 00:19:22,019 DEBUG   HandlerThread:21306 [handler.py:handle_request():146] handle_request: internal_messages
+2023-12-01 00:19:22,153 INFO    Thread-12 :21306 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/maneuvers-adaptation/wandb/run-20231201_001859-model_type-2023-12-01_00-18-58/files/output.log

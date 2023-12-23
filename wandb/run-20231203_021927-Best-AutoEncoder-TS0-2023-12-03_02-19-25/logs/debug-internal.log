@@ -1,0 +1,656 @@
+2023-12-03 02:19:27,158 INFO    StreamThr :31484 [internal.py:wandb_internal():86] W&B internal server running at pid: 31484, started at: 2023-12-03 02:19:27.157446
+2023-12-03 02:19:27,160 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: status
+2023-12-03 02:19:27,162 INFO    WriterThread:31484 [datastore.py:open_for_write():85] open: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/run-Best-AutoEncoder-TS0-2023-12-03_02-19-25.wandb
+2023-12-03 02:19:27,162 DEBUG   SenderThread:31484 [sender.py:send():380] send: header
+2023-12-03 02:19:27,174 DEBUG   SenderThread:31484 [sender.py:send():380] send: run
+2023-12-03 02:19:27,175 INFO    SenderThread:31484 [sender.py:_maybe_setup_resume():759] checking resume status for None/MerlionAnomalyDetector/Best-AutoEncoder-TS0-2023-12-03_02-19-25
+2023-12-03 02:19:27,419 INFO    SenderThread:31484 [dir_watcher.py:__init__():211] watching files in: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files
+2023-12-03 02:19:27,419 INFO    SenderThread:31484 [sender.py:_start_run_threads():1122] run started: Best-AutoEncoder-TS0-2023-12-03_02-19-25 with start time 1701587967.157453
+2023-12-03 02:19:27,427 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: check_version
+2023-12-03 02:19:27,427 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: check_version
+2023-12-03 02:19:27,507 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: run_start
+2023-12-03 02:19:27,556 DEBUG   HandlerThread:31484 [system_info.py:__init__():32] System info init
+2023-12-03 02:19:27,556 DEBUG   HandlerThread:31484 [system_info.py:__init__():47] System info init done
+2023-12-03 02:19:27,556 INFO    HandlerThread:31484 [system_monitor.py:start():194] Starting system monitor
+2023-12-03 02:19:27,556 INFO    SystemMonitor:31484 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2023-12-03 02:19:27,556 INFO    HandlerThread:31484 [system_monitor.py:probe():214] Collecting system info
+2023-12-03 02:19:27,557 INFO    SystemMonitor:31484 [interfaces.py:start():190] Started cpu monitoring
+2023-12-03 02:19:27,558 INFO    SystemMonitor:31484 [interfaces.py:start():190] Started disk monitoring
+2023-12-03 02:19:27,559 INFO    SystemMonitor:31484 [interfaces.py:start():190] Started gpu monitoring
+2023-12-03 02:19:27,560 INFO    SystemMonitor:31484 [interfaces.py:start():190] Started memory monitoring
+2023-12-03 02:19:27,560 INFO    SystemMonitor:31484 [interfaces.py:start():190] Started network monitoring
+2023-12-03 02:19:27,577 DEBUG   HandlerThread:31484 [system_info.py:probe():196] Probing system
+2023-12-03 02:19:27,643 DEBUG   HandlerThread:31484 [system_info.py:_probe_git():181] Probing git
+2023-12-03 02:19:27,650 DEBUG   HandlerThread:31484 [system_info.py:_probe_git():189] Probing git done
+2023-12-03 02:19:27,651 DEBUG   HandlerThread:31484 [system_info.py:probe():244] Probing system done
+2023-12-03 02:19:27,651 DEBUG   HandlerThread:31484 [system_monitor.py:probe():223] {'os': 'Linux-5.15.133.1-microsoft-standard-WSL2-x86_64-with-glibc2.36', 'python': '3.12.0', 'heartbeatAt': '2023-12-03T07:19:27.577387', 'startedAt': '2023-12-03T07:19:27.152702', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '/root/dev/Merlion/maneuvers-adaptation/ManeuverDetection.py', 'codePathLocal': 'maneuvers-adaptation/ManeuverDetection.py', 'codePath': 'maneuvers-adaptation/ManeuverDetection.py', 'git': {'remote': 'git@github.com:Anosen/Merlion.git', 'commit': '180d9587d6b685bd704037a45b93b57d4bc59a9d'}, 'email': 'gregoire.marie08@gmail.com', 'root': '/root/dev/Merlion', 'host': 'MSI', 'username': 'root', 'executable': '/root/miniconda3/envs/sys843_env/bin/python', 'cpu_count': 6, 'cpu_count_logical': 12, 'cpu_freq': {'current': 2592.0100000000007, 'min': 0.0, 'max': 0.0}, 'cpu_freq_per_core': [{'current': 2592.01, 'min': 0.0, 'max': 0.0}, {'current': 2592.01, 'min': 0.0, 'max': 0.0}, {'current': 2592.01, 'min': 0.0, 'max': 0.0}, {'current': 2592.01, 'min': 0.0, 'max': 0.0}, {'current': 2592.01, 'min': 0.0, 'max': 0.0}, {'current': 2592.01, 'min': 0.0, 'max': 0.0}, {'current': 2592.01, 'min': 0.0, 'max': 0.0}, {'current': 2592.01, 'min': 0.0, 'max': 0.0}, {'current': 2592.01, 'min': 0.0, 'max': 0.0}, {'current': 2592.01, 'min': 0.0, 'max': 0.0}, {'current': 2592.01, 'min': 0.0, 'max': 0.0}, {'current': 2592.01, 'min': 0.0, 'max': 0.0}], 'disk': {'/': {'total': 1006.853931427002, 'used': 17.691326141357422}}, 'gpu': 'NVIDIA GeForce RTX 3060 Laptop GPU', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 3060 Laptop GPU', 'memory_total': 6442450944}], 'memory': {'total': 7.671039581298828}}
+2023-12-03 02:19:27,651 INFO    HandlerThread:31484 [system_monitor.py:probe():224] Finished collecting system info
+2023-12-03 02:19:27,651 INFO    HandlerThread:31484 [system_monitor.py:probe():227] Publishing system info
+2023-12-03 02:19:27,651 DEBUG   HandlerThread:31484 [system_info.py:_save_pip():52] Saving list of pip packages installed into the current environment
+2023-12-03 02:19:27,651 DEBUG   HandlerThread:31484 [system_info.py:_save_pip():68] Saving pip packages done
+2023-12-03 02:19:27,651 DEBUG   HandlerThread:31484 [system_info.py:_save_conda():75] Saving list of conda packages installed into the current environment
+2023-12-03 02:19:28,421 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_created():271] file/dir created: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/conda-environment.yaml
+2023-12-03 02:19:28,421 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_created():271] file/dir created: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/requirements.txt
+2023-12-03 02:19:34,687 DEBUG   HandlerThread:31484 [system_info.py:_save_conda():87] Saving conda packages done
+2023-12-03 02:19:34,688 INFO    HandlerThread:31484 [system_monitor.py:probe():229] Finished publishing system info
+2023-12-03 02:19:34,691 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: status_report
+2023-12-03 02:19:34,692 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: keepalive
+2023-12-03 02:19:34,693 DEBUG   SenderThread:31484 [sender.py:send():380] send: files
+2023-12-03 02:19:34,693 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-metadata.json with policy now
+2023-12-03 02:19:34,699 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: stop_status
+2023-12-03 02:19:34,699 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: stop_status
+2023-12-03 02:19:34,704 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: internal_messages
+2023-12-03 02:19:34,836 DEBUG   SenderThread:31484 [sender.py:send():380] send: telemetry
+2023-12-03 02:19:34,960 INFO    wandb-upload_0:31484 [upload_job.py:push():131] Uploaded file /tmp/tmpum2pso0dwandb/dxkvkv7u-wandb-metadata.json
+2023-12-03 02:19:35,422 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/conda-environment.yaml
+2023-12-03 02:19:35,422 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_created():271] file/dir created: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/output.log
+2023-12-03 02:19:35,422 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_created():271] file/dir created: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/wandb-metadata.json
+2023-12-03 02:19:36,075 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-03 02:19:36,077 DEBUG   SenderThread:31484 [sender.py:send():380] send: history
+2023-12-03 02:19:36,077 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: summary_record
+2023-12-03 02:19:36,078 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:19:36,422 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_created():271] file/dir created: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/wandb-summary.json
+2023-12-03 02:19:36,812 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-03 02:19:36,813 DEBUG   SenderThread:31484 [sender.py:send():380] send: history
+2023-12-03 02:19:36,814 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: summary_record
+2023-12-03 02:19:36,814 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:19:37,423 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/wandb-summary.json
+2023-12-03 02:19:37,423 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/output.log
+2023-12-03 02:19:37,473 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: status_report
+2023-12-03 02:19:37,480 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-03 02:19:37,481 DEBUG   SenderThread:31484 [sender.py:send():380] send: history
+2023-12-03 02:19:37,482 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: summary_record
+2023-12-03 02:19:37,482 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:19:38,212 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-03 02:19:38,213 DEBUG   SenderThread:31484 [sender.py:send():380] send: history
+2023-12-03 02:19:38,213 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: summary_record
+2023-12-03 02:19:38,215 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:19:38,423 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/wandb-summary.json
+2023-12-03 02:19:38,974 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-03 02:19:38,975 DEBUG   SenderThread:31484 [sender.py:send():380] send: history
+2023-12-03 02:19:38,976 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: summary_record
+2023-12-03 02:19:38,976 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:19:39,424 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/wandb-summary.json
+2023-12-03 02:19:39,425 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/output.log
+2023-12-03 02:19:39,824 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-03 02:19:39,825 DEBUG   SenderThread:31484 [sender.py:send():380] send: history
+2023-12-03 02:19:39,825 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: summary_record
+2023-12-03 02:19:39,826 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:19:40,424 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/wandb-summary.json
+2023-12-03 02:19:40,615 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-03 02:19:40,616 DEBUG   SenderThread:31484 [sender.py:send():380] send: history
+2023-12-03 02:19:40,616 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: summary_record
+2023-12-03 02:19:40,620 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:19:41,424 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/wandb-summary.json
+2023-12-03 02:19:41,425 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/output.log
+2023-12-03 02:19:41,482 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-03 02:19:41,484 DEBUG   SenderThread:31484 [sender.py:send():380] send: history
+2023-12-03 02:19:41,484 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: summary_record
+2023-12-03 02:19:41,485 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:19:42,332 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-03 02:19:42,334 DEBUG   SenderThread:31484 [sender.py:send():380] send: history
+2023-12-03 02:19:42,334 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: summary_record
+2023-12-03 02:19:42,335 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:19:42,425 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/wandb-summary.json
+2023-12-03 02:19:43,004 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: status_report
+2023-12-03 02:19:43,010 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-03 02:19:43,011 DEBUG   SenderThread:31484 [sender.py:send():380] send: history
+2023-12-03 02:19:43,011 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: summary_record
+2023-12-03 02:19:43,012 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:19:43,425 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/wandb-summary.json
+2023-12-03 02:19:43,425 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/output.log
+2023-12-03 02:19:43,707 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-03 02:19:43,708 DEBUG   SenderThread:31484 [sender.py:send():380] send: history
+2023-12-03 02:19:43,708 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: summary_record
+2023-12-03 02:19:43,709 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:19:44,425 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/wandb-summary.json
+2023-12-03 02:19:44,549 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-03 02:19:44,550 DEBUG   SenderThread:31484 [sender.py:send():380] send: history
+2023-12-03 02:19:44,551 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: summary_record
+2023-12-03 02:19:44,552 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:19:45,316 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-03 02:19:45,317 DEBUG   SenderThread:31484 [sender.py:send():380] send: history
+2023-12-03 02:19:45,317 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: summary_record
+2023-12-03 02:19:45,317 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:19:45,426 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/wandb-summary.json
+2023-12-03 02:19:45,426 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/output.log
+2023-12-03 02:19:45,966 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-03 02:19:45,968 DEBUG   SenderThread:31484 [sender.py:send():380] send: history
+2023-12-03 02:19:45,968 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: summary_record
+2023-12-03 02:19:45,968 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:19:46,426 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/wandb-summary.json
+2023-12-03 02:19:46,709 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-03 02:19:46,710 DEBUG   SenderThread:31484 [sender.py:send():380] send: history
+2023-12-03 02:19:46,711 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: summary_record
+2023-12-03 02:19:46,711 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:19:47,426 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/wandb-summary.json
+2023-12-03 02:19:47,427 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/output.log
+2023-12-03 02:19:47,616 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-03 02:19:47,618 DEBUG   SenderThread:31484 [sender.py:send():380] send: history
+2023-12-03 02:19:47,618 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: summary_record
+2023-12-03 02:19:47,619 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:19:48,427 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/wandb-summary.json
+2023-12-03 02:19:48,460 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: status_report
+2023-12-03 02:19:48,466 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-03 02:19:48,468 DEBUG   SenderThread:31484 [sender.py:send():380] send: history
+2023-12-03 02:19:48,468 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: summary_record
+2023-12-03 02:19:48,469 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:19:49,261 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-03 02:19:49,262 DEBUG   SenderThread:31484 [sender.py:send():380] send: history
+2023-12-03 02:19:49,263 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: summary_record
+2023-12-03 02:19:49,263 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:19:49,427 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/wandb-summary.json
+2023-12-03 02:19:49,428 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/output.log
+2023-12-03 02:19:49,707 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: stop_status
+2023-12-03 02:19:49,708 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: stop_status
+2023-12-03 02:19:49,715 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: internal_messages
+2023-12-03 02:19:50,237 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-03 02:19:50,238 DEBUG   SenderThread:31484 [sender.py:send():380] send: history
+2023-12-03 02:19:50,239 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: summary_record
+2023-12-03 02:19:50,239 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:19:50,427 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/wandb-summary.json
+2023-12-03 02:19:51,024 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-03 02:19:51,025 DEBUG   SenderThread:31484 [sender.py:send():380] send: history
+2023-12-03 02:19:51,025 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: summary_record
+2023-12-03 02:19:51,025 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:19:51,428 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/wandb-summary.json
+2023-12-03 02:19:51,428 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/output.log
+2023-12-03 02:19:51,701 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-03 02:19:51,702 DEBUG   SenderThread:31484 [sender.py:send():380] send: history
+2023-12-03 02:19:51,703 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: summary_record
+2023-12-03 02:19:51,703 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:19:52,379 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-03 02:19:52,380 DEBUG   SenderThread:31484 [sender.py:send():380] send: history
+2023-12-03 02:19:52,380 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: summary_record
+2023-12-03 02:19:52,381 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:19:52,428 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/wandb-summary.json
+2023-12-03 02:19:53,119 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-03 02:19:53,120 DEBUG   SenderThread:31484 [sender.py:send():380] send: history
+2023-12-03 02:19:53,120 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: summary_record
+2023-12-03 02:19:53,121 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:19:53,428 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/wandb-summary.json
+2023-12-03 02:19:53,429 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/output.log
+2023-12-03 02:19:53,851 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: status_report
+2023-12-03 02:19:53,858 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-03 02:19:53,859 DEBUG   SenderThread:31484 [sender.py:send():380] send: history
+2023-12-03 02:19:53,860 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: summary_record
+2023-12-03 02:19:53,860 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:19:54,429 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/wandb-summary.json
+2023-12-03 02:19:54,656 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-03 02:19:54,658 DEBUG   SenderThread:31484 [sender.py:send():380] send: history
+2023-12-03 02:19:54,658 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: summary_record
+2023-12-03 02:19:54,659 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:19:55,429 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/wandb-summary.json
+2023-12-03 02:19:55,429 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/output.log
+2023-12-03 02:19:55,503 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-03 02:19:55,504 DEBUG   SenderThread:31484 [sender.py:send():380] send: history
+2023-12-03 02:19:55,504 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: summary_record
+2023-12-03 02:19:55,505 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:19:56,336 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-03 02:19:56,337 DEBUG   SenderThread:31484 [sender.py:send():380] send: history
+2023-12-03 02:19:56,338 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: summary_record
+2023-12-03 02:19:56,338 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:19:56,429 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/wandb-summary.json
+2023-12-03 02:19:57,179 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-03 02:19:57,180 DEBUG   SenderThread:31484 [sender.py:send():380] send: history
+2023-12-03 02:19:57,180 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: summary_record
+2023-12-03 02:19:57,181 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:19:57,430 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/wandb-summary.json
+2023-12-03 02:19:57,430 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/output.log
+2023-12-03 02:19:58,004 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-03 02:19:58,006 DEBUG   SenderThread:31484 [sender.py:send():380] send: history
+2023-12-03 02:19:58,006 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: summary_record
+2023-12-03 02:19:58,007 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:19:58,430 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/wandb-summary.json
+2023-12-03 02:19:58,793 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-03 02:19:58,794 DEBUG   SenderThread:31484 [sender.py:send():380] send: history
+2023-12-03 02:19:58,794 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: summary_record
+2023-12-03 02:19:58,795 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:19:59,431 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/wandb-summary.json
+2023-12-03 02:19:59,431 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/output.log
+2023-12-03 02:19:59,644 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: status_report
+2023-12-03 02:19:59,649 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-03 02:19:59,714 DEBUG   SenderThread:31484 [sender.py:send():380] send: history
+2023-12-03 02:19:59,715 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: summary_record
+2023-12-03 02:19:59,715 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:20:00,398 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-03 02:20:00,399 DEBUG   SenderThread:31484 [sender.py:send():380] send: history
+2023-12-03 02:20:00,399 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: summary_record
+2023-12-03 02:20:00,399 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:20:00,431 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/wandb-summary.json
+2023-12-03 02:20:00,431 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/config.yaml
+2023-12-03 02:20:01,084 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-03 02:20:01,085 DEBUG   SenderThread:31484 [sender.py:send():380] send: history
+2023-12-03 02:20:01,085 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: summary_record
+2023-12-03 02:20:01,086 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:20:01,431 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/wandb-summary.json
+2023-12-03 02:20:01,431 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/output.log
+2023-12-03 02:20:01,912 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-03 02:20:01,913 DEBUG   SenderThread:31484 [sender.py:send():380] send: history
+2023-12-03 02:20:01,913 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: summary_record
+2023-12-03 02:20:01,913 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:20:02,432 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/wandb-summary.json
+2023-12-03 02:20:02,696 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-03 02:20:02,697 DEBUG   SenderThread:31484 [sender.py:send():380] send: history
+2023-12-03 02:20:02,697 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: summary_record
+2023-12-03 02:20:02,698 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:20:03,432 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/wandb-summary.json
+2023-12-03 02:20:03,432 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/output.log
+2023-12-03 02:20:03,444 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-03 02:20:03,445 DEBUG   SenderThread:31484 [sender.py:send():380] send: history
+2023-12-03 02:20:03,445 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: summary_record
+2023-12-03 02:20:03,446 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:20:04,161 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-03 02:20:04,162 DEBUG   SenderThread:31484 [sender.py:send():380] send: history
+2023-12-03 02:20:04,163 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: summary_record
+2023-12-03 02:20:04,163 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:20:04,432 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/wandb-summary.json
+2023-12-03 02:20:04,719 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: internal_messages
+2023-12-03 02:20:04,740 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: stop_status
+2023-12-03 02:20:04,741 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: stop_status
+2023-12-03 02:20:04,830 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: status_report
+2023-12-03 02:20:04,973 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-03 02:20:04,974 DEBUG   SenderThread:31484 [sender.py:send():380] send: history
+2023-12-03 02:20:04,974 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: summary_record
+2023-12-03 02:20:04,975 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:20:05,433 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/wandb-summary.json
+2023-12-03 02:20:05,433 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/output.log
+2023-12-03 02:20:05,599 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-03 02:20:05,600 DEBUG   SenderThread:31484 [sender.py:send():380] send: history
+2023-12-03 02:20:05,601 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: summary_record
+2023-12-03 02:20:05,601 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:20:06,254 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-03 02:20:06,256 DEBUG   SenderThread:31484 [sender.py:send():380] send: history
+2023-12-03 02:20:06,256 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: summary_record
+2023-12-03 02:20:06,256 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:20:06,433 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/wandb-summary.json
+2023-12-03 02:20:06,918 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-03 02:20:06,919 DEBUG   SenderThread:31484 [sender.py:send():380] send: history
+2023-12-03 02:20:06,919 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: summary_record
+2023-12-03 02:20:06,919 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:20:07,433 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/wandb-summary.json
+2023-12-03 02:20:07,434 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/output.log
+2023-12-03 02:20:07,794 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-03 02:20:07,796 DEBUG   SenderThread:31484 [sender.py:send():380] send: history
+2023-12-03 02:20:07,796 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: summary_record
+2023-12-03 02:20:07,797 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:20:08,434 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/wandb-summary.json
+2023-12-03 02:20:08,592 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-03 02:20:08,594 DEBUG   SenderThread:31484 [sender.py:send():380] send: history
+2023-12-03 02:20:08,594 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: summary_record
+2023-12-03 02:20:08,595 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:20:09,374 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-03 02:20:09,375 DEBUG   SenderThread:31484 [sender.py:send():380] send: history
+2023-12-03 02:20:09,375 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: summary_record
+2023-12-03 02:20:09,376 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:20:09,434 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/wandb-summary.json
+2023-12-03 02:20:09,434 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/output.log
+2023-12-03 02:20:10,043 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: status_report
+2023-12-03 02:20:10,050 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-03 02:20:10,051 DEBUG   SenderThread:31484 [sender.py:send():380] send: history
+2023-12-03 02:20:10,052 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: summary_record
+2023-12-03 02:20:10,052 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:20:10,434 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/wandb-summary.json
+2023-12-03 02:20:10,847 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-03 02:20:10,848 DEBUG   SenderThread:31484 [sender.py:send():380] send: history
+2023-12-03 02:20:10,848 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: summary_record
+2023-12-03 02:20:10,848 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:20:11,435 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/wandb-summary.json
+2023-12-03 02:20:11,435 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/output.log
+2023-12-03 02:20:11,488 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-03 02:20:11,489 DEBUG   SenderThread:31484 [sender.py:send():380] send: history
+2023-12-03 02:20:11,489 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: summary_record
+2023-12-03 02:20:11,489 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:20:12,238 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-03 02:20:12,239 DEBUG   SenderThread:31484 [sender.py:send():380] send: history
+2023-12-03 02:20:12,240 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: summary_record
+2023-12-03 02:20:12,240 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:20:12,435 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/wandb-summary.json
+2023-12-03 02:20:13,118 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-03 02:20:13,119 DEBUG   SenderThread:31484 [sender.py:send():380] send: history
+2023-12-03 02:20:13,120 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: summary_record
+2023-12-03 02:20:13,120 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:20:13,436 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/wandb-summary.json
+2023-12-03 02:20:13,436 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/output.log
+2023-12-03 02:20:13,786 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-03 02:20:13,787 DEBUG   SenderThread:31484 [sender.py:send():380] send: history
+2023-12-03 02:20:13,787 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: summary_record
+2023-12-03 02:20:13,787 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:20:14,436 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/wandb-summary.json
+2023-12-03 02:20:14,489 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-03 02:20:14,490 DEBUG   SenderThread:31484 [sender.py:send():380] send: history
+2023-12-03 02:20:14,490 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: summary_record
+2023-12-03 02:20:14,490 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:20:15,107 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: status_report
+2023-12-03 02:20:15,116 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-03 02:20:15,117 DEBUG   SenderThread:31484 [sender.py:send():380] send: history
+2023-12-03 02:20:15,117 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: summary_record
+2023-12-03 02:20:15,118 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:20:15,436 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/wandb-summary.json
+2023-12-03 02:20:15,437 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/output.log
+2023-12-03 02:20:15,834 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-03 02:20:15,835 DEBUG   SenderThread:31484 [sender.py:send():380] send: history
+2023-12-03 02:20:15,835 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: summary_record
+2023-12-03 02:20:15,836 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:20:16,437 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/wandb-summary.json
+2023-12-03 02:20:16,463 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-03 02:20:16,464 DEBUG   SenderThread:31484 [sender.py:send():380] send: history
+2023-12-03 02:20:16,464 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: summary_record
+2023-12-03 02:20:16,465 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:20:17,097 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-03 02:20:17,098 DEBUG   SenderThread:31484 [sender.py:send():380] send: history
+2023-12-03 02:20:17,099 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: summary_record
+2023-12-03 02:20:17,099 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:20:17,437 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/wandb-summary.json
+2023-12-03 02:20:17,437 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/output.log
+2023-12-03 02:20:17,778 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-03 02:20:17,779 DEBUG   SenderThread:31484 [sender.py:send():380] send: history
+2023-12-03 02:20:17,779 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: summary_record
+2023-12-03 02:20:17,779 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:20:18,437 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/wandb-summary.json
+2023-12-03 02:20:18,530 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-03 02:20:18,531 DEBUG   SenderThread:31484 [sender.py:send():380] send: history
+2023-12-03 02:20:18,531 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: summary_record
+2023-12-03 02:20:18,531 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:20:19,173 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-03 02:20:19,174 DEBUG   SenderThread:31484 [sender.py:send():380] send: history
+2023-12-03 02:20:19,175 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: summary_record
+2023-12-03 02:20:19,175 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:20:19,438 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/wandb-summary.json
+2023-12-03 02:20:19,438 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/output.log
+2023-12-03 02:20:19,707 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: internal_messages
+2023-12-03 02:20:19,709 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: stop_status
+2023-12-03 02:20:19,709 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: stop_status
+2023-12-03 02:20:19,928 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-03 02:20:19,929 DEBUG   SenderThread:31484 [sender.py:send():380] send: history
+2023-12-03 02:20:19,929 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: summary_record
+2023-12-03 02:20:19,929 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:20:20,438 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/wandb-summary.json
+2023-12-03 02:20:20,660 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: status_report
+2023-12-03 02:20:20,668 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-03 02:20:20,669 DEBUG   SenderThread:31484 [sender.py:send():380] send: history
+2023-12-03 02:20:20,669 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: summary_record
+2023-12-03 02:20:20,669 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:20:21,419 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-03 02:20:21,420 DEBUG   SenderThread:31484 [sender.py:send():380] send: history
+2023-12-03 02:20:21,420 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: summary_record
+2023-12-03 02:20:21,420 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:20:21,439 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/wandb-summary.json
+2023-12-03 02:20:21,439 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/output.log
+2023-12-03 02:20:22,132 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-03 02:20:22,133 DEBUG   SenderThread:31484 [sender.py:send():380] send: history
+2023-12-03 02:20:22,133 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: summary_record
+2023-12-03 02:20:22,134 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:20:22,439 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/wandb-summary.json
+2023-12-03 02:20:22,879 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-03 02:20:22,880 DEBUG   SenderThread:31484 [sender.py:send():380] send: history
+2023-12-03 02:20:22,880 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: summary_record
+2023-12-03 02:20:22,880 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:20:23,439 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/wandb-summary.json
+2023-12-03 02:20:23,439 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/output.log
+2023-12-03 02:20:23,731 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-03 02:20:23,732 DEBUG   SenderThread:31484 [sender.py:send():380] send: history
+2023-12-03 02:20:23,732 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: summary_record
+2023-12-03 02:20:23,732 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:20:24,387 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-03 02:20:24,388 DEBUG   SenderThread:31484 [sender.py:send():380] send: history
+2023-12-03 02:20:24,388 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: summary_record
+2023-12-03 02:20:24,389 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:20:24,439 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/wandb-summary.json
+2023-12-03 02:20:25,031 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-03 02:20:25,032 DEBUG   SenderThread:31484 [sender.py:send():380] send: history
+2023-12-03 02:20:25,032 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: summary_record
+2023-12-03 02:20:25,032 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:20:25,440 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/wandb-summary.json
+2023-12-03 02:20:25,440 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/output.log
+2023-12-03 02:20:25,649 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-03 02:20:25,651 DEBUG   SenderThread:31484 [sender.py:send():380] send: history
+2023-12-03 02:20:25,651 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: summary_record
+2023-12-03 02:20:25,652 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:20:26,440 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/wandb-summary.json
+2023-12-03 02:20:26,442 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: status_report
+2023-12-03 02:20:26,449 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-03 02:20:26,450 DEBUG   SenderThread:31484 [sender.py:send():380] send: history
+2023-12-03 02:20:26,450 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: summary_record
+2023-12-03 02:20:26,450 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:20:27,109 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-03 02:20:27,111 DEBUG   SenderThread:31484 [sender.py:send():380] send: history
+2023-12-03 02:20:27,111 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: summary_record
+2023-12-03 02:20:27,111 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:20:27,440 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/wandb-summary.json
+2023-12-03 02:20:27,441 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/output.log
+2023-12-03 02:20:27,560 DEBUG   SystemMonitor:31484 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2023-12-03 02:20:27,562 DEBUG   SenderThread:31484 [sender.py:send():380] send: stats
+2023-12-03 02:20:27,745 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-03 02:20:27,746 DEBUG   SenderThread:31484 [sender.py:send():380] send: history
+2023-12-03 02:20:27,746 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: summary_record
+2023-12-03 02:20:27,747 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:20:28,427 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-03 02:20:28,428 DEBUG   SenderThread:31484 [sender.py:send():380] send: history
+2023-12-03 02:20:28,428 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: summary_record
+2023-12-03 02:20:28,429 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:20:28,441 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/wandb-summary.json
+2023-12-03 02:20:29,284 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-03 02:20:29,285 DEBUG   SenderThread:31484 [sender.py:send():380] send: history
+2023-12-03 02:20:29,286 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: summary_record
+2023-12-03 02:20:29,286 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:20:29,441 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/wandb-summary.json
+2023-12-03 02:20:29,441 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/output.log
+2023-12-03 02:20:30,002 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-03 02:20:30,003 DEBUG   SenderThread:31484 [sender.py:send():380] send: history
+2023-12-03 02:20:30,004 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: summary_record
+2023-12-03 02:20:30,004 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:20:30,441 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/wandb-summary.json
+2023-12-03 02:20:30,645 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-03 02:20:30,647 DEBUG   SenderThread:31484 [sender.py:send():380] send: history
+2023-12-03 02:20:30,647 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: summary_record
+2023-12-03 02:20:30,648 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:20:31,323 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-03 02:20:31,324 DEBUG   SenderThread:31484 [sender.py:send():380] send: history
+2023-12-03 02:20:31,324 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: summary_record
+2023-12-03 02:20:31,324 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:20:31,442 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/wandb-summary.json
+2023-12-03 02:20:31,442 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/output.log
+2023-12-03 02:20:32,077 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: status_report
+2023-12-03 02:20:32,084 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-03 02:20:32,089 DEBUG   SenderThread:31484 [sender.py:send():380] send: history
+2023-12-03 02:20:32,090 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: summary_record
+2023-12-03 02:20:32,090 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:20:32,442 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/wandb-summary.json
+2023-12-03 02:20:32,761 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-03 02:20:32,762 DEBUG   SenderThread:31484 [sender.py:send():380] send: history
+2023-12-03 02:20:32,763 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: summary_record
+2023-12-03 02:20:32,763 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:20:33,441 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-03 02:20:33,443 DEBUG   SenderThread:31484 [sender.py:send():380] send: history
+2023-12-03 02:20:33,443 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: summary_record
+2023-12-03 02:20:33,444 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/wandb-summary.json
+2023-12-03 02:20:33,444 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/output.log
+2023-12-03 02:20:33,445 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:20:34,260 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-03 02:20:34,261 DEBUG   SenderThread:31484 [sender.py:send():380] send: history
+2023-12-03 02:20:34,261 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: summary_record
+2023-12-03 02:20:34,261 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:20:34,444 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/wandb-summary.json
+2023-12-03 02:20:34,715 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: stop_status
+2023-12-03 02:20:34,716 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: stop_status
+2023-12-03 02:20:34,717 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: internal_messages
+2023-12-03 02:20:34,947 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-03 02:20:34,948 DEBUG   SenderThread:31484 [sender.py:send():380] send: history
+2023-12-03 02:20:34,948 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: summary_record
+2023-12-03 02:20:34,949 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:20:35,445 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/wandb-summary.json
+2023-12-03 02:20:35,445 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/output.log
+2023-12-03 02:20:35,728 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-03 02:20:35,728 DEBUG   SenderThread:31484 [sender.py:send():380] send: history
+2023-12-03 02:20:35,729 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: summary_record
+2023-12-03 02:20:35,729 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:20:36,387 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-03 02:20:36,388 DEBUG   SenderThread:31484 [sender.py:send():380] send: history
+2023-12-03 02:20:36,388 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: summary_record
+2023-12-03 02:20:36,389 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:20:36,445 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/wandb-summary.json
+2023-12-03 02:20:37,093 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: status_report
+2023-12-03 02:20:37,099 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-03 02:20:37,100 DEBUG   SenderThread:31484 [sender.py:send():380] send: history
+2023-12-03 02:20:37,100 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: summary_record
+2023-12-03 02:20:37,101 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:20:37,445 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/wandb-summary.json
+2023-12-03 02:20:37,446 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/output.log
+2023-12-03 02:20:37,779 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-03 02:20:37,780 DEBUG   SenderThread:31484 [sender.py:send():380] send: history
+2023-12-03 02:20:37,780 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: summary_record
+2023-12-03 02:20:37,781 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:20:38,446 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/wandb-summary.json
+2023-12-03 02:20:38,451 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-03 02:20:38,452 DEBUG   SenderThread:31484 [sender.py:send():380] send: history
+2023-12-03 02:20:38,453 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: summary_record
+2023-12-03 02:20:38,453 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:20:39,127 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-03 02:20:39,128 DEBUG   SenderThread:31484 [sender.py:send():380] send: history
+2023-12-03 02:20:39,128 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: summary_record
+2023-12-03 02:20:39,129 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:20:39,446 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/wandb-summary.json
+2023-12-03 02:20:39,446 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/output.log
+2023-12-03 02:20:39,916 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-03 02:20:39,917 DEBUG   SenderThread:31484 [sender.py:send():380] send: history
+2023-12-03 02:20:39,917 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: summary_record
+2023-12-03 02:20:39,917 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:20:40,144 DEBUG   SenderThread:31484 [sender.py:send():380] send: exit
+2023-12-03 02:20:40,144 INFO    SenderThread:31484 [sender.py:send_exit():585] handling exit code: 255
+2023-12-03 02:20:40,144 INFO    SenderThread:31484 [sender.py:send_exit():587] handling runtime: 72
+2023-12-03 02:20:40,144 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:20:40,145 INFO    SenderThread:31484 [sender.py:send_exit():593] send defer
+2023-12-03 02:20:40,145 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: defer
+2023-12-03 02:20:40,145 INFO    HandlerThread:31484 [handler.py:handle_request_defer():172] handle defer: 0
+2023-12-03 02:20:40,145 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: defer
+2023-12-03 02:20:40,145 INFO    SenderThread:31484 [sender.py:send_request_defer():609] handle sender defer: 0
+2023-12-03 02:20:40,145 INFO    SenderThread:31484 [sender.py:transition_state():613] send defer: 1
+2023-12-03 02:20:40,145 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: defer
+2023-12-03 02:20:40,145 INFO    HandlerThread:31484 [handler.py:handle_request_defer():172] handle defer: 1
+2023-12-03 02:20:40,146 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: defer
+2023-12-03 02:20:40,146 INFO    SenderThread:31484 [sender.py:send_request_defer():609] handle sender defer: 1
+2023-12-03 02:20:40,146 INFO    SenderThread:31484 [sender.py:transition_state():613] send defer: 2
+2023-12-03 02:20:40,146 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: defer
+2023-12-03 02:20:40,146 INFO    HandlerThread:31484 [handler.py:handle_request_defer():172] handle defer: 2
+2023-12-03 02:20:40,146 INFO    HandlerThread:31484 [system_monitor.py:finish():203] Stopping system monitor
+2023-12-03 02:20:40,146 DEBUG   SystemMonitor:31484 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2023-12-03 02:20:40,146 DEBUG   SystemMonitor:31484 [system_monitor.py:_start():183] Publishing last batch of metrics
+2023-12-03 02:20:40,147 INFO    HandlerThread:31484 [interfaces.py:finish():202] Joined cpu monitor
+2023-12-03 02:20:40,147 INFO    HandlerThread:31484 [interfaces.py:finish():202] Joined disk monitor
+2023-12-03 02:20:40,157 INFO    HandlerThread:31484 [interfaces.py:finish():202] Joined gpu monitor
+2023-12-03 02:20:40,157 INFO    HandlerThread:31484 [interfaces.py:finish():202] Joined memory monitor
+2023-12-03 02:20:40,157 INFO    HandlerThread:31484 [interfaces.py:finish():202] Joined network monitor
+2023-12-03 02:20:40,157 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: defer
+2023-12-03 02:20:40,157 INFO    SenderThread:31484 [sender.py:send_request_defer():609] handle sender defer: 2
+2023-12-03 02:20:40,158 INFO    SenderThread:31484 [sender.py:transition_state():613] send defer: 3
+2023-12-03 02:20:40,158 DEBUG   SenderThread:31484 [sender.py:send():380] send: stats
+2023-12-03 02:20:40,158 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: defer
+2023-12-03 02:20:40,158 INFO    HandlerThread:31484 [handler.py:handle_request_defer():172] handle defer: 3
+2023-12-03 02:20:40,158 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: defer
+2023-12-03 02:20:40,158 INFO    SenderThread:31484 [sender.py:send_request_defer():609] handle sender defer: 3
+2023-12-03 02:20:40,158 INFO    SenderThread:31484 [sender.py:transition_state():613] send defer: 4
+2023-12-03 02:20:40,159 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: defer
+2023-12-03 02:20:40,159 INFO    HandlerThread:31484 [handler.py:handle_request_defer():172] handle defer: 4
+2023-12-03 02:20:40,159 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: defer
+2023-12-03 02:20:40,159 INFO    SenderThread:31484 [sender.py:send_request_defer():609] handle sender defer: 4
+2023-12-03 02:20:40,159 INFO    SenderThread:31484 [sender.py:transition_state():613] send defer: 5
+2023-12-03 02:20:40,159 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: defer
+2023-12-03 02:20:40,159 INFO    HandlerThread:31484 [handler.py:handle_request_defer():172] handle defer: 5
+2023-12-03 02:20:40,159 DEBUG   SenderThread:31484 [sender.py:send():380] send: summary
+2023-12-03 02:20:40,160 INFO    SenderThread:31484 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-12-03 02:20:40,160 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: defer
+2023-12-03 02:20:40,160 INFO    SenderThread:31484 [sender.py:send_request_defer():609] handle sender defer: 5
+2023-12-03 02:20:40,160 INFO    SenderThread:31484 [sender.py:transition_state():613] send defer: 6
+2023-12-03 02:20:40,160 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: defer
+2023-12-03 02:20:40,160 INFO    HandlerThread:31484 [handler.py:handle_request_defer():172] handle defer: 6
+2023-12-03 02:20:40,160 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: defer
+2023-12-03 02:20:40,160 INFO    SenderThread:31484 [sender.py:send_request_defer():609] handle sender defer: 6
+2023-12-03 02:20:40,160 INFO    SenderThread:31484 [sender.py:transition_state():613] send defer: 7
+2023-12-03 02:20:40,160 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: status_report
+2023-12-03 02:20:40,160 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: defer
+2023-12-03 02:20:40,160 INFO    HandlerThread:31484 [handler.py:handle_request_defer():172] handle defer: 7
+2023-12-03 02:20:40,161 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: defer
+2023-12-03 02:20:40,161 INFO    SenderThread:31484 [sender.py:send_request_defer():609] handle sender defer: 7
+2023-12-03 02:20:40,446 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/wandb-summary.json
+2023-12-03 02:20:41,144 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: poll_exit
+2023-12-03 02:20:41,447 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/output.log
+2023-12-03 02:20:42,144 INFO    SenderThread:31484 [sender.py:transition_state():613] send defer: 8
+2023-12-03 02:20:42,144 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: poll_exit
+2023-12-03 02:20:42,145 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: defer
+2023-12-03 02:20:42,145 INFO    HandlerThread:31484 [handler.py:handle_request_defer():172] handle defer: 8
+2023-12-03 02:20:42,145 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: defer
+2023-12-03 02:20:42,145 INFO    SenderThread:31484 [sender.py:send_request_defer():609] handle sender defer: 8
+2023-12-03 02:20:42,145 INFO    SenderThread:31484 [job_builder.py:build():281] Attempting to build job artifact
+2023-12-03 02:20:42,146 INFO    SenderThread:31484 [job_builder.py:_get_source_type():393] is repo sourced job
+2023-12-03 02:20:42,148 INFO    SenderThread:31484 [job_builder.py:build():369] adding wandb-job metadata file
+2023-12-03 02:20:42,154 INFO    SenderThread:31484 [sender.py:transition_state():613] send defer: 9
+2023-12-03 02:20:42,154 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: defer
+2023-12-03 02:20:42,154 INFO    HandlerThread:31484 [handler.py:handle_request_defer():172] handle defer: 9
+2023-12-03 02:20:42,154 DEBUG   SenderThread:31484 [sender.py:send():380] send: artifact
+2023-12-03 02:20:42,447 INFO    Thread-12 :31484 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/output.log
+2023-12-03 02:20:42,532 INFO    SenderThread:31484 [sender.py:send_artifact():1456] sent artifact job-git_github.com_Anosen_Merlion.git_maneuvers-adaptation_ManeuverDetection.py - {'id': 'QXJ0aWZhY3Q6NjU1ODc0MTMw', 'state': 'COMMITTED', 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjEyMDQ0MzM4OA==', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6NjU1ODc1OTAz', 'versionIndex': 3}}}
+2023-12-03 02:20:42,532 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: defer
+2023-12-03 02:20:42,532 INFO    SenderThread:31484 [sender.py:send_request_defer():609] handle sender defer: 9
+2023-12-03 02:20:42,532 INFO    SenderThread:31484 [dir_watcher.py:finish():358] shutting down directory watcher
+2023-12-03 02:20:43,448 INFO    SenderThread:31484 [dir_watcher.py:finish():388] scan: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files
+2023-12-03 02:20:43,448 INFO    SenderThread:31484 [dir_watcher.py:finish():402] scan save: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/wandb-metadata.json wandb-metadata.json
+2023-12-03 02:20:43,448 INFO    SenderThread:31484 [dir_watcher.py:finish():402] scan save: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/config.yaml config.yaml
+2023-12-03 02:20:43,448 INFO    SenderThread:31484 [dir_watcher.py:finish():402] scan save: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/conda-environment.yaml conda-environment.yaml
+2023-12-03 02:20:43,448 INFO    SenderThread:31484 [dir_watcher.py:finish():402] scan save: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/requirements.txt requirements.txt
+2023-12-03 02:20:43,449 INFO    SenderThread:31484 [dir_watcher.py:finish():402] scan save: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/output.log output.log
+2023-12-03 02:20:43,449 INFO    SenderThread:31484 [dir_watcher.py:finish():402] scan save: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/wandb-summary.json wandb-summary.json
+2023-12-03 02:20:43,451 INFO    SenderThread:31484 [sender.py:transition_state():613] send defer: 10
+2023-12-03 02:20:43,453 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: defer
+2023-12-03 02:20:43,453 INFO    HandlerThread:31484 [handler.py:handle_request_defer():172] handle defer: 10
+2023-12-03 02:20:43,455 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: defer
+2023-12-03 02:20:43,455 INFO    SenderThread:31484 [sender.py:send_request_defer():609] handle sender defer: 10
+2023-12-03 02:20:43,455 INFO    SenderThread:31484 [file_pusher.py:finish():175] shutting down file pusher
+2023-12-03 02:20:43,625 INFO    wandb-upload_0:31484 [upload_job.py:push():131] Uploaded file /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/config.yaml
+2023-12-03 02:20:43,674 INFO    wandb-upload_1:31484 [upload_job.py:push():131] Uploaded file /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/conda-environment.yaml
+2023-12-03 02:20:43,746 INFO    wandb-upload_2:31484 [upload_job.py:push():131] Uploaded file /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/requirements.txt
+2023-12-03 02:20:43,761 INFO    wandb-upload_4:31484 [upload_job.py:push():131] Uploaded file /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/wandb-summary.json
+2023-12-03 02:20:43,766 INFO    wandb-upload_3:31484 [upload_job.py:push():131] Uploaded file /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/files/output.log
+2023-12-03 02:20:43,966 INFO    Thread-11 (_thread_body):31484 [sender.py:transition_state():613] send defer: 11
+2023-12-03 02:20:43,967 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: defer
+2023-12-03 02:20:43,967 INFO    HandlerThread:31484 [handler.py:handle_request_defer():172] handle defer: 11
+2023-12-03 02:20:43,967 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: defer
+2023-12-03 02:20:43,967 INFO    SenderThread:31484 [sender.py:send_request_defer():609] handle sender defer: 11
+2023-12-03 02:20:43,968 INFO    SenderThread:31484 [file_pusher.py:join():181] waiting for file pusher
+2023-12-03 02:20:43,968 INFO    SenderThread:31484 [sender.py:transition_state():613] send defer: 12
+2023-12-03 02:20:43,968 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: defer
+2023-12-03 02:20:43,968 INFO    HandlerThread:31484 [handler.py:handle_request_defer():172] handle defer: 12
+2023-12-03 02:20:43,968 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: defer
+2023-12-03 02:20:43,968 INFO    SenderThread:31484 [sender.py:send_request_defer():609] handle sender defer: 12
+2023-12-03 02:20:43,968 INFO    SenderThread:31484 [file_stream.py:finish():595] file stream finish called
+2023-12-03 02:20:44,200 INFO    SenderThread:31484 [file_stream.py:finish():599] file stream finish is done
+2023-12-03 02:20:44,200 INFO    SenderThread:31484 [sender.py:transition_state():613] send defer: 13
+2023-12-03 02:20:44,201 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: defer
+2023-12-03 02:20:44,201 INFO    HandlerThread:31484 [handler.py:handle_request_defer():172] handle defer: 13
+2023-12-03 02:20:44,201 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: defer
+2023-12-03 02:20:44,201 INFO    SenderThread:31484 [sender.py:send_request_defer():609] handle sender defer: 13
+2023-12-03 02:20:44,201 INFO    SenderThread:31484 [sender.py:transition_state():613] send defer: 14
+2023-12-03 02:20:44,201 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: defer
+2023-12-03 02:20:44,201 INFO    HandlerThread:31484 [handler.py:handle_request_defer():172] handle defer: 14
+2023-12-03 02:20:44,202 DEBUG   SenderThread:31484 [sender.py:send():380] send: final
+2023-12-03 02:20:44,202 DEBUG   SenderThread:31484 [sender.py:send():380] send: footer
+2023-12-03 02:20:44,202 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: defer
+2023-12-03 02:20:44,202 INFO    SenderThread:31484 [sender.py:send_request_defer():609] handle sender defer: 14
+2023-12-03 02:20:44,203 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: poll_exit
+2023-12-03 02:20:44,203 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: server_info
+2023-12-03 02:20:44,203 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: get_summary
+2023-12-03 02:20:44,203 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: sampled_history
+2023-12-03 02:20:44,204 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: poll_exit
+2023-12-03 02:20:44,204 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: server_info
+2023-12-03 02:20:44,206 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: internal_messages
+2023-12-03 02:20:44,206 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: job_info
+2023-12-03 02:20:44,248 DEBUG   SenderThread:31484 [sender.py:send_request():407] send_request: job_info
+2023-12-03 02:20:44,248 INFO    MainThread:31484 [wandb_run.py:_footer_history_summary_info():3599] rendering history
+2023-12-03 02:20:44,249 INFO    MainThread:31484 [wandb_run.py:_footer_history_summary_info():3631] rendering summary
+2023-12-03 02:20:44,249 INFO    MainThread:31484 [wandb_run.py:_footer_sync_info():3558] logging synced files
+2023-12-03 02:20:44,250 DEBUG   HandlerThread:31484 [handler.py:handle_request():146] handle_request: shutdown
+2023-12-03 02:20:44,250 INFO    HandlerThread:31484 [handler.py:finish():866] shutting down handler
+2023-12-03 02:20:45,207 INFO    WriterThread:31484 [datastore.py:close():294] close: /root/dev/Merlion/wandb/run-20231203_021927-Best-AutoEncoder-TS0-2023-12-03_02-19-25/run-Best-AutoEncoder-TS0-2023-12-03_02-19-25.wandb
+2023-12-03 02:20:45,248 INFO    SenderThread:31484 [sender.py:finish():1534] shutting down sender
+2023-12-03 02:20:45,248 INFO    SenderThread:31484 [file_pusher.py:finish():175] shutting down file pusher
+2023-12-03 02:20:45,248 INFO    SenderThread:31484 [file_pusher.py:join():181] waiting for file pusher

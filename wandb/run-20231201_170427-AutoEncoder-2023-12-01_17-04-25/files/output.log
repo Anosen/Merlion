@@ -1,0 +1,127 @@
+
+  0%|                                                                                                                                                                                  | 0/192 [00:00<?, ?it/s]
+Building AE with input 6, hidden size 1, layer sizes (25, 10, 5)
+
+
+
+ |========================================| 100.0% Complete, Loss 0.0024
+Building AE with input 6, hidden size 1, layer sizes (25, 10, 5)
+
+
+ |========================================| 100.0% Complete, Loss 0.0025
+Building AE with input 6, hidden size 1, layer sizes (25, 10, 5)
+
+
+
+ |========================================| 100.0% Complete, Loss 0.0021
+Building AE with input 6, hidden size 1, layer sizes (25, 10, 5)
+
+
+ |========================================| 100.0% Complete, Loss 0.0024
+Building AE with input 6, hidden size 1, layer sizes (25, 10, 5)
+
+
+
+ |========================================| 100.0% Complete, Loss 0.0021
+Building AE with input 6, hidden size 1, layer sizes (25, 10, 5)
+
+
+ |========================================| 100.0% Complete, Loss 0.0023
+Building AE with input 6, hidden size 1, layer sizes (25, 10, 5)
+
+
+ |========================================| 100.0% Complete, Loss 0.0022
+Building AE with input 6, hidden size 1, layer sizes (25, 10, 5)
+
+
+
+  0%|                                                                                                                                                                                  | 0/192 [00:00<?, ?it/s]2023-12-01 17:05:32 - INFO - (maneuver_detection:310): New best AutoEncoder:
+{'alm_threshold': 1.8,
+ 'batch_size': 512,
+ 'hidden_size': 1,
+ 'layer_sizes': (25, 10, 5),
+ 'lr': 0.0005,
+ 'num_epochs': 50,
+ 'sequence_len': 1}
+Configuration;
+{'f1': 0.2901158307298656,
+ 'f2': 0.24628091216943954,
+ 'loss': 1.1166556775569916,
+ 'mttd': 150861.75,
+ 'precision': 0.7955138389849221,
+ 'recall': 0.28166998856425485,
+ 'train_time': 7.078911750000001}
+ |========================================| 100.0% Complete, Loss 0.0028
+Building AE with input 6, hidden size 1, layer sizes (25, 10, 5)
+
+
+
+ |========================================| 100.0% Complete, Loss 0.0020
+Building AE with input 6, hidden size 1, layer sizes (25, 10, 5)
+
+
+
+ |========================================| 100.0% Complete, Loss 0.0018
+Building AE with input 6, hidden size 1, layer sizes (25, 10, 5)
+
+
+
+ |========================================| 100.0% Complete, Loss 0.0016
+Building AE with input 6, hidden size 1, layer sizes (25, 10, 5)
+
+
+
+ |========================================| 100.0% Complete, Loss 0.0017
+Building AE with input 6, hidden size 1, layer sizes (25, 10, 5)
+
+
+ |========================================| 100.0% Complete, Loss 0.0017
+Building AE with input 6, hidden size 1, layer sizes (25, 10, 5)
+
+
+
+ |========================================| 100.0% Complete, Loss 0.0017
+Building AE with input 6, hidden size 1, layer sizes (25, 10, 5)
+
+
+  1%|▊                                                                                                                                                                      | 1/192 [01:50<5:53:06, 110.92s/it]
+Traceback (most recent call last):
+  File "/root/dev/Merlion/maneuvers-adaptation/maneuver_detection.py", line 329, in <module>
+  File "/root/dev/Merlion/maneuvers-adaptation/maneuver_detection.py", line 298, in auto_ml
+  File "/root/dev/Merlion/maneuvers-adaptation/maneuver_detection.py", line 238, in run_dataset_average
+    # start a new wandb run to track this script
+  File "/root/dev/Merlion/maneuvers-adaptation/maneuver_detection.py", line 124, in train_eval
+    epoch = checkpoint['epoch']
+                               ^
+  File "/root/dev/Merlion/maneuvers-adaptation/maneuver_detection.py", line 106, in train
+  File "/root/dev/Merlion/merlion/models/anomaly/base.py", line 199, in train
+    train_result = call_with_accepted_kwargs(  # For ensembles
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/dev/Merlion/merlion/utils/misc.py", line 177, in call_with_accepted_kwargs
+    return fn(**kwargs)
+           ^^^^^^^^^^^^
+  File "/root/dev/Merlion/merlion/models/anomaly/autoencoder.py", line 137, in _train
+    for i, (batch, _, _, _) in enumerate(loader):
+  File "/root/dev/Merlion/merlion/models/utils/rolling_window_dataset.py", line 218, in __iter__
+    batch.append(self[i])
+                 ~~~~^^^
+  File "/root/dev/Merlion/merlion/models/utils/rolling_window_dataset.py", line 262, in __getitem__
+    past_timestamp = self.timestamp[past_start:past_end]
+                     ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/sys843_env/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 5370, in __getitem__
+    return self._getitem_slice(key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/sys843_env/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 5395, in _getitem_slice
+    res = self._data[slobj]
+          ~~~~~~~~~~^^^^^^^
+  File "/root/miniconda3/envs/sys843_env/lib/python3.12/site-packages/pandas/core/arrays/datetimelike.py", line 382, in __getitem__
+    result._freq = self._get_getitem_freq(key)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/sys843_env/lib/python3.12/site-packages/pandas/core/arrays/datetimelike.py", line 395, in _get_getitem_freq
+    key = check_array_indexer(self, key)  # maybe ndarray[bool] -> slice
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/sys843_env/lib/python3.12/site-packages/pandas/core/indexers/utils.py", line 517, in check_array_indexer
+    if is_list_like(indexer):
+       ^^^^^^^^^^^^^^^^^^^^^
+
+ |====================================    | 92.0% Complete, Loss 0.0020

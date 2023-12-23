@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/root/dev/Merlion/maneuvers-adaptation/ManeuverDetection.py", line 422, in <module>
+    md.single_model_train(model_type=model_type, model_kwargs=best_models_kargs[model_type])
+  File "/root/dev/Merlion/maneuvers-adaptation/ManeuverDetection.py", line 340, in single_model_train
+    model = copy.deepcpoy(self.model_types[model_type](config=self.model_types[model_type].config_class(**model_kwargs)))
+            ^^^^^^^^^^^^^
+AttributeError: module 'copy' has no attribute 'deepcpoy'. Did you mean: 'deepcopy'?

@@ -1,0 +1,49 @@
+Building AE with input 6, hidden size 11, layer sizes (15, 10, 5)
+ |                                        | 0.2% Complete, Loss 0.0024
+ |                                        | 0.4% Complete, Loss 0.0024
+ |                                        | 0.6% Complete, Loss 0.0024
+ |                                        | 0.8% Complete, Loss 0.0023
+ |                                        | 1.0% Complete, Loss 0.0023
+ |                                        | 1.2% Complete, Loss 0.0021
+ |                                        | 1.4% Complete, Loss 0.0020
+ |                                        | 1.6% Complete, Loss 0.0020
+ |                                        | 1.8% Complete, Loss 0.0020
+ |                                        | 2.0% Complete, Loss 0.0019
+ |                                        | 2.2% Complete, Loss 0.0018
+ |                                        | 2.4% Complete, Loss 0.0017
+ |=                                       | 2.6% Complete, Loss 0.0017
+ |=                                       | 2.8% Complete, Loss 0.0016
+ |=                                       | 3.0% Complete, Loss 0.0015
+ |=                                       | 3.2% Complete, Loss 0.0015
+ |=                                       | 3.4% Complete, Loss 0.0014
+ |=                                       | 3.6% Complete, Loss 0.0014
+ |=                                       | 3.8% Complete, Loss 0.0013
+Traceback (most recent call last):
+  File "/root/dev/Merlion/maneuvers-adaptation/ManeuverDetection copy.py", line 438, in <module>
+    md.single_model_train(model_type=model_type, model_kwargs=best_models_kargs[model_type])
+  File "/root/dev/Merlion/maneuvers-adaptation/ManeuverDetection copy.py", line 375, in single_model_train
+    test_precision, test_recall, test_f1, test_f2, test_mttd = self.eval(model, test_data, test_labels)
+                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/dev/Merlion/maneuvers-adaptation/ManeuverDetection copy.py", line 151, in eval
+    labels = model.get_anomaly_label(test_data)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/dev/Merlion/merlion/models/anomaly/base.py", line 286, in get_anomaly_label
+    scores = self.get_anomaly_score(time_series, time_series_prev)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/dev/Merlion/merlion/models/anomaly/base.py", line 268, in get_anomaly_score
+    anom_scores = self._get_anomaly_score(time_series, time_series_prev)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/dev/Merlion/merlion/models/anomaly/autoencoder.py", line 169, in _get_anomaly_score
+    for y, _, _, _ in loader:
+  File "/root/dev/Merlion/merlion/models/utils/rolling_window_dataset.py", line 220, in __iter__
+    yield self.collate_batch(batch)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/dev/Merlion/merlion/models/utils/rolling_window_dataset.py", line 231, in collate_batch
+    past_ts = np.stack(past_ts)
+              ^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/sys843_env/lib/python3.12/site-packages/numpy/core/shape_base.py", line 443, in stack
+    arrays = [asanyarray(arr) for arr in arrays]
+              ^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/sys843_env/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 914, in __array__
+    def __array__(self, dtype=None) -> np.ndarray:
+KeyboardInterrupt

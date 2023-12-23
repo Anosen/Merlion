@@ -1,0 +1,16 @@
+
+  0%|          | 0/192 [00:00<?, ?it/s]
+------------------------- Time series 1/8 -------------------------
+Error in callback <bound method _WandbInit._pause_backend of <wandb.sdk.wandb_init._WandbInit object at 0x7f343c2e37d0>> (for post_run_cell), with arguments args (<ExecutionResult object at 7f330efd38c0, execution_count=11 error_before_exec=None error_in_exec=type object 'datetime.datetime' has no attribute 'timedelta' info=<ExecutionInfo object at 7f33141def00, raw_cell="md = ManeuverDetection(dataset=None, log_wandb=Tru.." store_history=True silent=False shell_futures=True cell_id=vscode-notebook-cell://wsl%2Bdebian_sys843/root/dev/Merlion/maneuvers-adaptation/TLE_with_DORIS_maneuevers.ipynb#X31sdnNjb2RlLXJlbW90ZQ%3D%3D> result=None>,),kwargs {}:
+2023-11-30 23:48:43 - INFO - (2851157441:4): Initializing ManeuverDetection: log_wandb: False - eval:False
+2023-11-30 23:48:43 - INFO - (2851157441:16): Fetching dataset: /root/dev/Merlion/maneuvers-adaptation/data/residues
+2023-11-30 23:48:43 - INFO - (2836284721:64): Cropping train_data to a length of 1709
+2023-11-30 23:48:43 - INFO - (2836284721:64): Cropping test_data to a length of 4400
+2023-11-30 23:48:43 - INFO - (2836284721:64): Cropping test_labels to a length of 4416
+  0%|          | 0/192 [00:00<?, ?it/s]
+Error in callback <bound method _WandbInit._resume_backend of <wandb.sdk.wandb_init._WandbInit object at 0x7f343c2e37d0>> (for pre_run_cell), with arguments args (<ExecutionInfo object at 7f331484f6e0, raw_cell="class ManeuverDetection():
+    def __init__(self,.." store_history=True silent=False shell_futures=True cell_id=vscode-notebook-cell://wsl%2Bdebian_sys843/root/dev/Merlion/maneuvers-adaptation/TLE_with_DORIS_maneuevers.ipynb#X30sdnNjb2RlLXJlbW90ZQ%3D%3D>,),kwargs {}:
+Error in callback <bound method _WandbInit._pause_backend of <wandb.sdk.wandb_init._WandbInit object at 0x7f343c2e37d0>> (for post_run_cell), with arguments args (<ExecutionResult object at 7f331484f740, execution_count=12 error_before_exec=None error_in_exec=None info=<ExecutionInfo object at 7f331484f6e0, raw_cell="class ManeuverDetection():
+    def __init__(self,.." store_history=True silent=False shell_futures=True cell_id=vscode-notebook-cell://wsl%2Bdebian_sys843/root/dev/Merlion/maneuvers-adaptation/TLE_with_DORIS_maneuevers.ipynb#X30sdnNjb2RlLXJlbW90ZQ%3D%3D> result=None>,),kwargs {}:
+Error in callback <bound method _WandbInit._resume_backend of <wandb.sdk.wandb_init._WandbInit object at 0x7f343c2e37d0>> (for pre_run_cell), with arguments args (<ExecutionInfo object at 7f33148325d0, raw_cell="md = ManeuverDetection(dataset=None, log_wandb=Fal.." store_history=True silent=False shell_futures=True cell_id=vscode-notebook-cell://wsl%2Bdebian_sys843/root/dev/Merlion/maneuvers-adaptation/TLE_with_DORIS_maneuevers.ipynb#X31sdnNjb2RlLXJlbW90ZQ%3D%3D>,),kwargs {}:
+------------------------- Time series 1/8 -------------------------

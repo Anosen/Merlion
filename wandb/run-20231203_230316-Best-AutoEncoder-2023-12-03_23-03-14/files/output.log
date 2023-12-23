@@ -1,0 +1,51 @@
+Building AE with input 6, hidden size 11, layer sizes (15, 10, 5)
+ |                                        | 0.2% Complete, Loss 0.0024
+ |                                        | 0.4% Complete, Loss 0.0024
+ |                                        | 0.6% Complete, Loss 0.0024
+ |                                        | 0.8% Complete, Loss 0.0024
+ |                                        | 1.0% Complete, Loss 0.0024
+ |                                        | 1.2% Complete, Loss 0.0024
+ |                                        | 1.4% Complete, Loss 0.0023
+ |                                        | 1.6% Complete, Loss 0.0022
+ |                                        | 1.8% Complete, Loss 0.0021
+ |                                        | 2.0% Complete, Loss 0.0020
+ |                                        | 2.2% Complete, Loss 0.0019
+ |                                        | 2.4% Complete, Loss 0.0017
+ |=                                       | 2.6% Complete, Loss 0.0016
+ |=                                       | 2.8% Complete, Loss 0.0015
+ |=                                       | 3.0% Complete, Loss 0.0015
+ |=                                       | 3.2% Complete, Loss 0.0014
+ |=                                       | 3.4% Complete, Loss 0.0013
+ |=                                       | 3.6% Complete, Loss 0.0013
+ |=                                       | 3.8% Complete, Loss 0.0013
+ |=                                       | 4.0% Complete, Loss 0.0012
+ |=                                       | 4.2% Complete, Loss 0.0012
+Traceback (most recent call last):
+  File "/root/dev/Merlion/maneuvers-adaptation/ManeuverDetection.py", line 427, in <module>
+    md.single_model_train(model_type=model_type, model_kwargs=best_models_kargs[model_type])
+  File "/root/dev/Merlion/maneuvers-adaptation/ManeuverDetection.py", line 362, in single_model_train
+    loss = model._train_one_epoch(loader)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/dev/Merlion/merlion/models/anomaly/autoencoder.py", line 122, in _train_one_epoch
+    for i, (batch, _, _, _) in enumerate(loader):
+  File "/root/dev/Merlion/merlion/models/utils/rolling_window_dataset.py", line 218, in __iter__
+    batch.append(self[i])
+                 ~~~~^^^
+  File "/root/dev/Merlion/merlion/models/utils/rolling_window_dataset.py", line 264, in __getitem__
+    future_timestamp = self.timestamp[future_start:future_end]
+                       ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/sys843_env/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 5370, in __getitem__
+    return self._getitem_slice(key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/sys843_env/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 5395, in _getitem_slice
+    res = self._data[slobj]
+          ~~~~~~~~~~^^^^^^^
+  File "/root/miniconda3/envs/sys843_env/lib/python3.12/site-packages/pandas/core/arrays/datetimelike.py", line 376, in __getitem__
+    result = cast("Union[Self, DTScalarOrNaT]", super().__getitem__(key))
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/sys843_env/lib/python3.12/site-packages/pandas/core/arrays/_mixins.py", line 284, in __getitem__
+    key = check_array_indexer(self, key)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/sys843_env/lib/python3.12/site-packages/pandas/core/indexers/utils.py", line 419, in check_array_indexer
+    def check_array_indexer(array: AnyArrayLike, indexer: Any) -> Any:
+KeyboardInterrupt

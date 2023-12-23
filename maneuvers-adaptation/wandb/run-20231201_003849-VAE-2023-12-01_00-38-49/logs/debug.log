@@ -1,0 +1,40 @@
+2023-12-01 00:38:49,925 INFO    MainThread:24222 [wandb_setup.py:_flush():76] Current SDK version is 0.15.12
+2023-12-01 00:38:49,925 INFO    MainThread:24222 [wandb_setup.py:_flush():76] Configure stats pid to 24222
+2023-12-01 00:38:49,925 INFO    MainThread:24222 [wandb_setup.py:_flush():76] Loading settings from /root/.config/wandb/settings
+2023-12-01 00:38:49,925 INFO    MainThread:24222 [wandb_setup.py:_flush():76] Loading settings from /root/dev/Merlion/maneuvers-adaptation/wandb/settings
+2023-12-01 00:38:49,925 INFO    MainThread:24222 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2023-12-01 00:38:49,925 INFO    MainThread:24222 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2023-12-01 00:38:49,925 INFO    MainThread:24222 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program': '<python with no main file>'}
+2023-12-01 00:38:49,925 INFO    MainThread:24222 [wandb_init.py:_log_setup():528] Logging user logs to /root/dev/Merlion/maneuvers-adaptation/wandb/run-20231201_003849-VAE-2023-12-01_00-38-49/logs/debug.log
+2023-12-01 00:38:49,926 INFO    MainThread:24222 [wandb_init.py:_log_setup():529] Logging internal logs to /root/dev/Merlion/maneuvers-adaptation/wandb/run-20231201_003849-VAE-2023-12-01_00-38-49/logs/debug-internal.log
+2023-12-01 00:38:49,926 INFO    MainThread:24222 [wandb_init.py:init():568] calling init triggers
+2023-12-01 00:38:49,926 INFO    MainThread:24222 [wandb_init.py:init():575] wandb.init called with sweep_config: {}
+config: {'model': 'VAE', 'dataset': 'residues'}
+2023-12-01 00:38:49,926 INFO    MainThread:24222 [wandb_init.py:init():593] re-initializing run, found existing run on stack: VAE-2023-12-01_00-32-41
+2023-12-01 00:38:49,928 INFO    MainThread:24222 [wandb_run.py:_finish():1934] finishing run gregoire-marie/MerlionAnomalyDetector/VAE-2023-12-01_00-32-41
+2023-12-01 00:38:49,929 ERROR   MainThread:24222 [jupyter.py:save_history():437] Run pip install nbformat to save notebook history
+2023-12-01 00:38:49,929 INFO    MainThread:24222 [jupyter.py:save_ipynb():373] not saving jupyter notebook
+2023-12-01 00:38:49,929 INFO    MainThread:24222 [wandb_init.py:_jupyter_teardown():456] cleaning up jupyter logic
+2023-12-01 00:38:49,929 INFO    MainThread:24222 [wandb_run.py:_atexit_cleanup():2168] got exitcode: 0
+2023-12-01 00:38:49,929 INFO    MainThread:24222 [wandb_run.py:_restore():2151] restore
+2023-12-01 00:38:49,930 INFO    MainThread:24222 [wandb_run.py:_restore():2157] restore done
+2023-12-01 00:38:55,194 INFO    MainThread:24222 [wandb_run.py:_footer_history_summary_info():3599] rendering history
+2023-12-01 00:38:55,195 INFO    MainThread:24222 [wandb_run.py:_footer_history_summary_info():3631] rendering summary
+2023-12-01 00:38:55,199 INFO    MainThread:24222 [wandb_run.py:_footer_sync_info():3558] logging synced files
+2023-12-01 00:38:55,326 INFO    MainThread:24222 [wandb_init.py:init():618] starting backend
+2023-12-01 00:38:55,326 INFO    MainThread:24222 [wandb_init.py:init():622] setting up manager
+2023-12-01 00:38:55,328 INFO    MainThread:24222 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2023-12-01 00:38:55,329 INFO    MainThread:24222 [wandb_init.py:init():628] backend started and connected
+2023-12-01 00:38:55,335 INFO    MainThread:24222 [wandb_run.py:_label_probe_notebook():1276] probe notebook
+2023-12-01 00:38:55,335 INFO    MainThread:24222 [wandb_run.py:_label_probe_notebook():1286] Unable to probe notebook: 'NoneType' object has no attribute 'get'
+2023-12-01 00:38:55,336 INFO    MainThread:24222 [wandb_init.py:init():720] updated telemetry
+2023-12-01 00:38:55,368 INFO    MainThread:24222 [wandb_init.py:init():753] communicating run to backend with 90.0 second timeout
+2023-12-01 00:38:56,566 INFO    MainThread:24222 [wandb_run.py:_on_init():2220] communicating current version
+2023-12-01 00:38:56,630 INFO    MainThread:24222 [wandb_run.py:_on_init():2229] got version response upgrade_message: "wandb version 0.16.0 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2023-12-01 00:38:56,630 INFO    MainThread:24222 [wandb_init.py:init():804] starting run threads in backend
+2023-12-01 00:39:09,145 INFO    MainThread:24222 [wandb_run.py:_console_start():2199] atexit reg
+2023-12-01 00:39:09,145 INFO    MainThread:24222 [wandb_run.py:_redirect():2054] redirect: wrap_raw
+2023-12-01 00:39:09,145 INFO    MainThread:24222 [wandb_run.py:_redirect():2119] Wrapping output streams.
+2023-12-01 00:39:09,145 INFO    MainThread:24222 [wandb_run.py:_redirect():2144] Redirects installed.
+2023-12-01 00:39:09,146 INFO    MainThread:24222 [wandb_init.py:init():845] run started, returning control to user process

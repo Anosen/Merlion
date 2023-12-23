@@ -1,0 +1,8 @@
+
+Building AE with input 6, hidden size 11, layer sizes (15, 10, 5)
+Traceback (most recent call last):
+  File "/root/dev/Merlion/maneuvers-adaptation/ManeuverDetection.py", line 443, in <module>
+    md.single_model_train(model_type=model_type, model_kwargs=best_models_kargs[model_type])
+  File "/root/dev/Merlion/maneuvers-adaptation/ManeuverDetection.py", line 367, in single_model_train
+    model.setup_model(self, train_data=train_data_pd)
+TypeError: AutoEncoder.setup_model() got multiple values for argument 'train_data'

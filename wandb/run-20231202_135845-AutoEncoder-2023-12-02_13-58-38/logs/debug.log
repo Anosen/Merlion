@@ -1,0 +1,27 @@
+2023-12-02 13:58:45,830 INFO    MainThread:21507 [wandb_setup.py:_flush():76] Current SDK version is 0.15.12
+2023-12-02 13:58:45,831 INFO    MainThread:21507 [wandb_setup.py:_flush():76] Configure stats pid to 21507
+2023-12-02 13:58:45,831 INFO    MainThread:21507 [wandb_setup.py:_flush():76] Loading settings from /root/.config/wandb/settings
+2023-12-02 13:58:45,831 INFO    MainThread:21507 [wandb_setup.py:_flush():76] Loading settings from /root/dev/Merlion/wandb/settings
+2023-12-02 13:58:45,831 INFO    MainThread:21507 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2023-12-02 13:58:45,831 INFO    MainThread:21507 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2023-12-02 13:58:45,831 INFO    MainThread:21507 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'maneuvers-adaptation/ManeuverDetection.py', 'program_abspath': '/root/dev/Merlion/maneuvers-adaptation/ManeuverDetection.py', 'program': '/root/dev/Merlion/maneuvers-adaptation/ManeuverDetection.py'}
+2023-12-02 13:58:45,831 INFO    MainThread:21507 [wandb_init.py:_log_setup():528] Logging user logs to /root/dev/Merlion/wandb/run-20231202_135845-AutoEncoder-2023-12-02_13-58-38/logs/debug.log
+2023-12-02 13:58:45,832 INFO    MainThread:21507 [wandb_init.py:_log_setup():529] Logging internal logs to /root/dev/Merlion/wandb/run-20231202_135845-AutoEncoder-2023-12-02_13-58-38/logs/debug-internal.log
+2023-12-02 13:58:45,832 INFO    MainThread:21507 [wandb_init.py:init():568] calling init triggers
+2023-12-02 13:58:45,832 INFO    MainThread:21507 [wandb_init.py:init():575] wandb.init called with sweep_config: {}
+config: {'model': 'AutoEncoder', 'dataset': 'residues'}
+2023-12-02 13:58:45,832 INFO    MainThread:21507 [wandb_init.py:init():618] starting backend
+2023-12-02 13:58:45,832 INFO    MainThread:21507 [wandb_init.py:init():622] setting up manager
+2023-12-02 13:58:45,836 INFO    MainThread:21507 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2023-12-02 13:58:45,838 INFO    MainThread:21507 [wandb_init.py:init():628] backend started and connected
+2023-12-02 13:58:45,846 INFO    MainThread:21507 [wandb_init.py:init():720] updated telemetry
+2023-12-02 13:58:45,866 INFO    MainThread:21507 [wandb_init.py:init():753] communicating run to backend with 90.0 second timeout
+2023-12-02 13:58:46,260 INFO    MainThread:21507 [wandb_run.py:_on_init():2220] communicating current version
+2023-12-02 13:58:46,301 INFO    MainThread:21507 [wandb_run.py:_on_init():2229] got version response upgrade_message: "wandb version 0.16.0 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2023-12-02 13:58:46,301 INFO    MainThread:21507 [wandb_init.py:init():804] starting run threads in backend
+2023-12-02 13:58:53,092 INFO    MainThread:21507 [wandb_run.py:_console_start():2199] atexit reg
+2023-12-02 13:58:53,093 INFO    MainThread:21507 [wandb_run.py:_redirect():2054] redirect: wrap_raw
+2023-12-02 13:58:53,093 INFO    MainThread:21507 [wandb_run.py:_redirect():2119] Wrapping output streams.
+2023-12-02 13:58:53,094 INFO    MainThread:21507 [wandb_run.py:_redirect():2144] Redirects installed.
+2023-12-02 13:58:53,096 INFO    MainThread:21507 [wandb_init.py:init():845] run started, returning control to user process

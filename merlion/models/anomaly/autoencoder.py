@@ -95,19 +95,33 @@ class AutoEncoder(DetectorBase):
         self.model = None
         self.data_dim = None
 
+    def _build_empty_model(self, dim, log_validation=False):
+        input_size=dim * self.k
+        hidden_size=self.hidden_size
+        layer_sizes=self.layer_sizes
+        print(f'Building AE with input {input_size}, hidden (latent) size {hidden_size}, layer sizes {layer_sizes}')
+        model = AEModule(input_size=dim * self.k, hidden_size=self.hidden_size, layer_sizes=self.layer_sizes)
+        
+        self.log_validation = log_validation
+        self.data_dim = dim
+        self.model = model.to(self.device)
+        self.optimizer = torch.optim.Adam(self.model.parameters(), lr=self.lr)
+        return model
+
     def _build_model(self, dim):
         input_size=dim * self.k
         hidden_size=self.hidden_size
         layer_sizes=self.layer_sizes
-        print(f'Building AE with input {input_size}, hidden size {hidden_size}, layer sizes {layer_sizes}')
+        print(f'Building AE with input {input_size}, hidden (latent) size {hidden_size}, layer sizes {layer_sizes}')
         model = AEModule(input_size=dim * self.k, hidden_size=self.hidden_size, layer_sizes=self.layer_sizes)
         return model
 
-    def _train(self, train_data: pd.DataFrame, train_config=None):
-        self.model = self._build_model(train_data.shape[1]).to(self.device)
-        self.data_dim = train_data.shape[1]
-
-        loader = RollingWindowDataset(
+    def setup_model(self, train_data: pd.DataFrame):
+        """
+        Sets up the model with train data.
+        """
+        # Create a data loader
+        self.loader = RollingWindowDataset(
             train_data,
             target_seq_index=None,
             shuffle=True,
@@ -116,22 +130,57 @@ class AutoEncoder(DetectorBase):
             n_future=0,
             batch_size=self.batch_size,
         )
-        optimizer = torch.optim.Adam(self.model.parameters(), lr=self.lr)
+        
+        # Set up the optimizer
+        self.optimizer = torch.optim.Adam(self.model.parameters(), lr=self.lr)
+
+    def get_loss(self):
+        self.model.eval()
+        total_loss = 0
+        for i, (batch, _, _, _) in enumerate(self.loader):
+            batch = torch.tensor(batch, dtype=torch.float, device=self.device)
+            loss = self.model.loss(batch)
+            self.optimizer.zero_grad()
+            loss.backward()
+            self.optimizer.step()
+            total_loss += loss
+        #self.total_loss+=total_loss
+        return total_loss/self.loader.n_points
+
+    def _train_one_epoch(self):
+        self.model.train()
+        total_loss = 0
+        for i, (batch, _, _, _) in enumerate(self.loader):
+            batch = torch.tensor(batch, dtype=torch.float, device=self.device)
+            loss = self.model.loss(batch)
+            self.optimizer.zero_grad()
+            loss.backward()
+            self.optimizer.step()
+            total_loss += loss
+        #self.total_loss+=total_loss
+        return total_loss/self.loader.n_points
+
+    def _train(self, train_data: pd.DataFrame, train_config=None):
+        self.model = self._build_model(train_data.shape[1]).to(self.device)
+        self.data_dim = train_data.shape[1]
+        self.loader = RollingWindowDataset(
+            train_data,
+            target_seq_index=None,
+            shuffle=True,
+            flatten=False,
+            n_past=self.k,
+            n_future=0,
+            batch_size=self.batch_size,
+        )
+        self.optimizer = torch.optim.Adam(self.model.parameters(), lr=self.lr)
         bar = ProgressBar(total=self.num_epochs)
 
         self.model.train()
         for epoch in range(self.num_epochs):
-            total_loss = 0
-            for i, (batch, _, _, _) in enumerate(loader):
-                batch = torch.tensor(batch, dtype=torch.float, device=self.device)
-                loss = self.model.loss(batch)
-                optimizer.zero_grad()
-                loss.backward()
-                optimizer.step()
-                total_loss += loss
+            loss = self._train_one_epoch()
             if bar is not None:
-                bar.print(epoch + 1, prefix="", suffix="Complete, Loss {:.4f}".format(total_loss / len(train_data)))
-
+                bar.print(epoch + 1, prefix="", suffix="Complete, Loss {:.4f}".format(loss))
+            self.total_loss=loss
         return self._get_anomaly_score(train_data)
 
     def _get_anomaly_score(self, time_series: pd.DataFrame, time_series_prev: pd.DataFrame = None) -> pd.DataFrame:

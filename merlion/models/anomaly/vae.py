@@ -107,6 +107,22 @@ class VAE(DetectorBase):
     def require_univariate(self) -> bool:
         return False
 
+    def _build_empty_model(self, dim):
+        model = CVAE(
+            x_dim=dim * self.k,
+            c_dim=0,
+            encoder_hidden_sizes=self.encoder_hidden_sizes,
+            decoder_hidden_sizes=self.decoder_hidden_sizes,
+            latent_size=self.latent_size,
+            dropout_rate=self.dropout_rate,
+            activation=self.activation,
+        )
+        
+        self.data_dim = dim
+        self.model = model.to(self.device)
+        self.optimizer = torch.optim.Adam(self.model.parameters(), lr=self.lr)
+        return model
+
     def _build_model(self, dim):
         model = CVAE(
             x_dim=dim * self.k,
@@ -119,11 +135,8 @@ class VAE(DetectorBase):
         )
         return model
 
-    def _train(self, train_data: pd.DataFrame, train_config=None) -> pd.DataFrame:
-        self.model = self._build_model(train_data.shape[1]).to(self.device)
-        self.data_dim = train_data.shape[1]
-
-        loader = RollingWindowDataset(
+    def setup_model(self, train_data: pd.DataFrame):
+        self.loader = RollingWindowDataset(
             train_data,
             target_seq_index=None,
             shuffle=True,
@@ -132,25 +145,48 @@ class VAE(DetectorBase):
             n_future=0,
             batch_size=self.batch_size,
         )
-        optimizer = torch.optim.Adam(self.model.parameters(), lr=self.lr)
-        loss_func = nn.MSELoss()
+        self.optimizer = torch.optim.Adam(self.model.parameters(), lr=self.lr)
+        self.loss_func = nn.MSELoss()
+        
+    def _train_one_epoch(self):
+        self.model.train()
+        total_loss = 0
+        for i, (batch, _, _, _) in enumerate(self.loader):
+            x = torch.tensor(batch, dtype=torch.float, device=self.device)
+            recon_x, mu, log_var, _ = self.model(x, None)
+            recon_loss = self.loss_func(x, recon_x)
+            kld_loss = -0.5 * torch.mean(torch.sum(1 + log_var - mu**2 - log_var.exp(), dim=1), dim=0)
+            loss = recon_loss + kld_loss * self.kld_weight
+            self.optimizer.zero_grad()
+            loss.backward()
+            self.optimizer.step()
+            total_loss += loss
+        #self.total_loss+=total_loss
+        return total_loss/self.loader.n_points
+
+    def _train(self, train_data: pd.DataFrame, train_config=None) -> pd.DataFrame:
+        self.model = self._build_model(train_data.shape[1]).to(self.device)
+        self.data_dim = train_data.shape[1]
+
+        self.loader = RollingWindowDataset(
+            train_data,
+            target_seq_index=None,
+            shuffle=True,
+            flatten=True,
+            n_past=self.k,
+            n_future=0,
+            batch_size=self.batch_size,
+        )
+        self.optimizer = torch.optim.Adam(self.model.parameters(), lr=self.lr)
+        self.loss_func = nn.MSELoss()
         bar = ProgressBar(total=self.num_epochs)
 
         self.model.train()
         for epoch in range(self.num_epochs):
-            total_loss = 0
-            for i, (batch, _, _, _) in enumerate(loader):
-                x = torch.tensor(batch, dtype=torch.float, device=self.device)
-                recon_x, mu, log_var, _ = self.model(x, None)
-                recon_loss = loss_func(x, recon_x)
-                kld_loss = -0.5 * torch.mean(torch.sum(1 + log_var - mu**2 - log_var.exp(), dim=1), dim=0)
-                loss = recon_loss + kld_loss * self.kld_weight
-                optimizer.zero_grad()
-                loss.backward()
-                optimizer.step()
-                total_loss += loss
+            total_loss = self._train_one_epoch()
             if bar is not None:
-                bar.print(epoch + 1, prefix="", suffix="Complete, Loss {:.4f}".format(total_loss / len(train_data)))
+                bar.print(epoch + 1, prefix="", suffix="Complete, Loss {:.4f}".format(total_loss))
+            self.total_loss=total_loss
         return self._get_anomaly_score(train_data)
 
     def _get_anomaly_score(self, time_series: pd.DataFrame, time_series_prev: pd.DataFrame = None) -> pd.DataFrame:

@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/root/dev/Merlion/maneuvers-adaptation/ManeuverDetection.py", line 454, in <module>
+    md.single_model_train(model_type=model_type, model_kwargs=best_models_kargs[model_type])
+  File "/root/dev/Merlion/maneuvers-adaptation/ManeuverDetection.py", line 385, in single_model_train
+    loss = model._train_one_epoch(loader)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/dev/Merlion/merlion/models/anomaly/vae.py", line 143, in _train_one_epoch
+    recon_loss = self.loss_func(x, recon_x)
+                 ^^^^^^^^^^^^^^
+AttributeError: 'VAE' object has no attribute 'loss_func'

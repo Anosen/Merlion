@@ -1,0 +1,159 @@
+
+Building AE with input 6, hidden size 11, layer sizes (15, 10, 5)
+ |                                        | 0.2% Complete, Loss 0.0024
+ |                                        | 0.4% Complete, Loss 0.0024
+ |                                        | 0.6% Complete, Loss 0.0024
+ |                                        | 0.8% Complete, Loss 0.0024
+ |                                        | 1.0% Complete, Loss 0.0023
+ |                                        | 1.2% Complete, Loss 0.0021
+ |                                        | 1.4% Complete, Loss 0.0020
+ |                                        | 1.6% Complete, Loss 0.0020
+ |                                        | 1.8% Complete, Loss 0.0019
+ |                                        | 2.0% Complete, Loss 0.0019
+ |                                        | 2.2% Complete, Loss 0.0018
+ |                                        | 2.4% Complete, Loss 0.0018
+ |=                                       | 2.6% Complete, Loss 0.0017
+ |=                                       | 2.8% Complete, Loss 0.0017
+ |=                                       | 3.0% Complete, Loss 0.0017
+ |=                                       | 3.2% Complete, Loss 0.0016
+ |=                                       | 3.4% Complete, Loss 0.0016
+ |=                                       | 3.6% Complete, Loss 0.0015
+ |=                                       | 3.8% Complete, Loss 0.0015
+ |=                                       | 4.0% Complete, Loss 0.0014
+ |=                                       | 4.2% Complete, Loss 0.0014
+ |=                                       | 4.4% Complete, Loss 0.0014
+ |=                                       | 4.6% Complete, Loss 0.0014
+ |=                                       | 4.8% Complete, Loss 0.0014
+ |==                                      | 5.0% Complete, Loss 0.0014
+ |==                                      | 5.2% Complete, Loss 0.0014
+ |==                                      | 5.4% Complete, Loss 0.0013
+ |==                                      | 5.6% Complete, Loss 0.0013
+ |==                                      | 5.8% Complete, Loss 0.0013
+ |==                                      | 6.0% Complete, Loss 0.0012
+ |==                                      | 6.2% Complete, Loss 0.0012
+ |==                                      | 6.4% Complete, Loss 0.0012
+ |==                                      | 6.6% Complete, Loss 0.0011
+ |==                                      | 6.8% Complete, Loss 0.0011
+ |==                                      | 7.0% Complete, Loss 0.0010
+ |==                                      | 7.2% Complete, Loss 0.0010
+ |==                                      | 7.4% Complete, Loss 0.0010
+ |===                                     | 7.6% Complete, Loss 0.0010
+ |===                                     | 7.8% Complete, Loss 0.0011
+ |===                                     | 8.0% Complete, Loss 0.0010
+ |===                                     | 8.2% Complete, Loss 0.0010
+ |===                                     | 8.4% Complete, Loss 0.0009
+ |===                                     | 8.6% Complete, Loss 0.0009
+ |===                                     | 8.8% Complete, Loss 0.0009
+ |===                                     | 9.0% Complete, Loss 0.0008
+ |===                                     | 9.2% Complete, Loss 0.0008
+ |===                                     | 9.4% Complete, Loss 0.0008
+ |===                                     | 9.6% Complete, Loss 0.0008
+ |===                                     | 9.8% Complete, Loss 0.0008
+ |====                                    | 10.0% Complete, Loss 0.0008
+ |====                                    | 10.2% Complete, Loss 0.0008
+ |====                                    | 10.4% Complete, Loss 0.0008
+ |====                                    | 10.6% Complete, Loss 0.0009
+ |====                                    | 10.8% Complete, Loss 0.0010
+ |====                                    | 11.0% Complete, Loss 0.0010
+ |====                                    | 11.2% Complete, Loss 0.0008
+ |====                                    | 11.4% Complete, Loss 0.0009
+ |====                                    | 11.6% Complete, Loss 0.0008
+ |====                                    | 11.8% Complete, Loss 0.0007
+ |====                                    | 12.0% Complete, Loss 0.0007
+ |====                                    | 12.2% Complete, Loss 0.0007
+ |====                                    | 12.4% Complete, Loss 0.0007
+ |=====                                   | 12.6% Complete, Loss 0.0007
+ |=====                                   | 12.8% Complete, Loss 0.0006
+ |=====                                   | 13.0% Complete, Loss 0.0006
+ |=====                                   | 13.2% Complete, Loss 0.0006
+ |=====                                   | 13.4% Complete, Loss 0.0006
+ |=====                                   | 13.6% Complete, Loss 0.0006
+ |=====                                   | 13.8% Complete, Loss 0.0006
+ |=====                                   | 14.0% Complete, Loss 0.0006
+ |=====                                   | 14.2% Complete, Loss 0.0006
+ |=====                                   | 14.4% Complete, Loss 0.0006
+ |=====                                   | 14.6% Complete, Loss 0.0006
+ |=====                                   | 14.8% Complete, Loss 0.0006
+ |======                                  | 15.0% Complete, Loss 0.0006
+ |======                                  | 15.2% Complete, Loss 0.0006
+ |======                                  | 15.4% Complete, Loss 0.0006
+ |======                                  | 15.6% Complete, Loss 0.0006
+ |======                                  | 15.8% Complete, Loss 0.0006
+ |======                                  | 16.0% Complete, Loss 0.0006
+ |======                                  | 16.2% Complete, Loss 0.0006
+ |======                                  | 16.4% Complete, Loss 0.0006
+ |======                                  | 16.6% Complete, Loss 0.0006
+ |======                                  | 16.8% Complete, Loss 0.0006
+ |======                                  | 17.0% Complete, Loss 0.0006
+ |======                                  | 17.2% Complete, Loss 0.0005
+ |======                                  | 17.4% Complete, Loss 0.0005
+ |=======                                 | 17.6% Complete, Loss 0.0005
+ |=======                                 | 17.8% Complete, Loss 0.0005
+ |=======                                 | 18.0% Complete, Loss 0.0005
+ |=======                                 | 18.2% Complete, Loss 0.0005
+ |=======                                 | 18.4% Complete, Loss 0.0006
+ |=======                                 | 18.6% Complete, Loss 0.0006
+ |=======                                 | 18.8% Complete, Loss 0.0006
+ |=======                                 | 19.0% Complete, Loss 0.0006
+ |=======                                 | 19.2% Complete, Loss 0.0005
+ |=======                                 | 19.4% Complete, Loss 0.0005
+ |=======                                 | 19.6% Complete, Loss 0.0005
+ |=======                                 | 19.8% Complete, Loss 0.0005
+ |========                                | 20.0% Complete, Loss 0.0005
+ |========                                | 20.2% Complete, Loss 0.0005
+ |========                                | 20.4% Complete, Loss 0.0005
+ |========                                | 20.6% Complete, Loss 0.0005
+ |========                                | 20.8% Complete, Loss 0.0005
+ |========                                | 21.0% Complete, Loss 0.0005
+ |========                                | 21.2% Complete, Loss 0.0005
+ |========                                | 21.4% Complete, Loss 0.0005
+ |========                                | 21.6% Complete, Loss 0.0005
+ |========                                | 21.8% Complete, Loss 0.0005
+ |========                                | 22.0% Complete, Loss 0.0005
+ |========                                | 22.2% Complete, Loss 0.0005
+ |========                                | 22.4% Complete, Loss 0.0005
+Traceback (most recent call last):
+  File "/root/dev/Merlion/maneuvers-adaptation/ManeuverDetection_old_working.py", line 433, in <module>
+    md.single_model_train(model_type=model_type, model_kwargs=best_models_kargs[model_type])
+  File "/root/dev/Merlion/maneuvers-adaptation/ManeuverDetection_old_working.py", line 370, in single_model_train
+    test_precision, test_recall, test_f1, test_f2, test_mttd = self.eval(model, test_data, test_labels)
+                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/dev/Merlion/maneuvers-adaptation/ManeuverDetection_old_working.py", line 150, in eval
+    labels = model.get_anomaly_label(test_data)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/dev/Merlion/merlion/models/anomaly/base.py", line 286, in get_anomaly_label
+    scores = self.get_anomaly_score(time_series, time_series_prev)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/dev/Merlion/merlion/models/anomaly/base.py", line 256, in get_anomaly_score
+    time_series, time_series_prev = self.transform_time_series(time_series, time_series_prev)
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/dev/Merlion/merlion/models/base.py", line 329, in transform_time_series
+    time_series = self.transform(time_series)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/dev/Merlion/merlion/transform/sequence.py", line 81, in __call__
+    time_series = f(time_series)
+                  ^^^^^^^^^^^^^^
+  File "/root/dev/Merlion/merlion/transform/normalize.py", line 90, in __call__
+    var = var - bias[name]
+          ~~~~^~~~~~~~~~~~
+  File "/root/miniconda3/envs/sys843_env/lib/python3.12/site-packages/pandas/core/ops/common.py", line 76, in new_method
+    return method(self, other)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/sys843_env/lib/python3.12/site-packages/pandas/core/arraylike.py", line 194, in __sub__
+    return self._arith_method(other, operator.sub)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/sys843_env/lib/python3.12/site-packages/pandas/core/series.py", line 5815, in _arith_method
+    return base.IndexOpsMixin._arith_method(self, other, op)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/sys843_env/lib/python3.12/site-packages/pandas/core/base.py", line 1371, in _arith_method
+    res_name = ops.get_op_result_name(self, other)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/sys843_env/lib/python3.12/site-packages/pandas/core/ops/common.py", line 96, in get_op_result_name
+    if isinstance(right, (ABCSeries, ABCIndex)):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/sys843_env/lib/python3.12/site-packages/pandas/core/dtypes/generic.py", line 44, in _instancecheck
+    return _check(inst) and not isinstance(inst, type)
+           ^^^^^^^^^^^^
+  File "/root/miniconda3/envs/sys843_env/lib/python3.12/site-packages/pandas/core/dtypes/generic.py", line 37, in _check
+    def _check(inst) -> bool:
+KeyboardInterrupt
